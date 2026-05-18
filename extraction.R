@@ -4,13 +4,14 @@
 library(ggplot2)
 full_doc <- readLines("500022JL.txt")
 full_doc <- full_doc[!(full_doc %in% "")] # Get rid of empty lines
-# Split in pages
+# Split in pages, this is the page break pattern below
 pgsplit <- grep("-------\f", full_doc)
 splitidx <- cumsum(seq_along(full_doc) %in% pgsplit) + 1L
 doc <- split(full_doc, splitidx)
 rm(full_doc, pgsplit, splitidx)
 
 # FUNCTIONS----------------------------
+# Gets the data between Header titles
 get_between <- function(x, ix) {
   bix <- ix[1L:length(ix) - 1L] + c(1L, 1L, 2L, 2L, 2L, 1L, 1L)
   eix <- ix[2L:length(ix)] - 1L
@@ -22,15 +23,18 @@ get_between <- function(x, ix) {
   return(lst)
 }
 
+# Removes non-numeric data beyond a certain length (here, 35)
 rem_nonum <- function(x) {
   nonum <- grep("^(\\d|\\.)", x, invert = TRUE)
   nonum <- min(nonum[nonum > 35]) - 1L
   x[seq(1, nonum)]
 }
 
+# Sometimes numeric data is split by decimal in the OCR
+# But, they remain in the order they appear. This reunites the numbers.
 join_by_decimal <- function(x) {
   x[grep("^NS$", x)] <- NA
-  this_pre <- grep("^\\w$", x)
+  this_pre <- grep("^\\w$", x) # Use word character because sometimes OCR adds non-digits
   this_post <- grep("^\\.", x)
   stopifnot(length(this_pre) == length(this_post))
   x[this_pre] <- paste0(x[this_pre], x[this_post])
@@ -38,6 +42,7 @@ join_by_decimal <- function(x) {
   return(x)
 }
 
+# In the References, sometimes Authors and Year get split up in OCR. This reunites them.
 join_by_space <- function(x, lhs, rhs) {
   this_lhs <- which(x %in% lhs)
   this_rhs <- which(x %in% rhs) # Usually later in the vector
@@ -47,6 +52,20 @@ join_by_space <- function(x, lhs, rhs) {
   return(x)
 }
 
+# Regular expression for the Headers which will be the columns
+cols <- "(Species|Sex|Animals|Age|(W|H)eight|Variance|Reference)$"
+# Evaluate the potential rows of data
+check_data_rows <- function(x) {
+  x <- x[!(x %in% "")]
+  idx <- grep(cols, x)
+  # Sometimes... Species is not right next to where this column starts
+  idx <- c(idx, length(x))
+  idx[3] <- idx[3] - 1L
+  diff(idx)
+}
+
+# Makes a list of table columns. Lists can have varying lengths.
+# This is manually cleaned up and turned into data.frame.
 find_table_cols <- function(x) {
   x <- x[!(x %in% "")]
   idx <- grep(cols, x)
@@ -60,6 +79,7 @@ find_table_cols <- function(x) {
   return(xlist)
 }
 
+# Fill values down a column when OCR missed them.
 fill_down <- function(x, val, len) {
   stopifnot(length(x) < len)
   ol <- length(x) + 1L
@@ -67,6 +87,8 @@ fill_down <- function(x, val, len) {
   return(x)
 }
 
+# Sometimes, the OCR shifted the order of split decimals, this is a helper function
+# to "shift back" the order of vectors.
 shiftswap_vec <- function(x, start, size, shift) {
   xlen <- length(x)
   stopifnot(start + size + shift - 1 <= xlen)
@@ -84,23 +106,12 @@ shiftswap_vec <- function(x, start, size, shift) {
 rat_docs <- doc[110:128]
 # Looks like Strain Prefix starts at index 117
 # but let's find things programmatically
-cols <- "(Species|Sex|Animals|Age|(W|H)eight|Variance|Reference)$"
-# Evaluate the potential rows of data
-check_data_rows <- function(x) {
-  x <- x[!(x %in% "")]
-  idx <- grep(cols, x)
-  # Sometimes... Species is not right next to where this column starts
-  idx <- c(idx, length(x))
-  idx[3] <- idx[3] - 1L
-  diff(idx)
-}
-
 
 tlst <- lapply(rat_docs, find_table_cols)
-lenlst <- lapply(tlst, lengths) # Get actual row lengths here
+lenlst <- lapply(tlst, lengths) # Get actual row lengths here, written below
 rowlens <- c(42, 43, 42, 44, 41, 43, 43, 45, 44, 42, 41, 44, 38, 44, 44, 43, 42, 44, 32)
 
-c("Species", "Sex", "N", "Age", "Weight", "Variance", "Reference")
+c("Species", "Sex", "N", "Age", "Weight", "Variance", "Reference") # Used for reference
 
 # Manual Changes
 tlst[["110"]][["Weight"]] <- join_by_decimal(tlst[["110"]][["Weight"]])
@@ -155,7 +166,7 @@ rat_df$Variance <- trimws(gsub(" ", "", rat_df$Variance))
 rat_df$Variance[grep("^NS$", rat_df$Variance)] <- NA
 rat_df$Species[grep("^NS$", rat_df$Species)] <- NA
 
-## FIX SPECIES NAMES
+## FIX Species names misspelled/misidentified by OCR
 unique(rat_df$Species)
 
 rat_df$Species <- replace(
@@ -258,7 +269,7 @@ rat_df$Species <- replace(
 )
 unique(rat_df$Species)
 
-## FIX References
+## FIX References misspelled/misidentified by OCR
 rat_df$Reference <- gsub("\\. (?=\\d{4})", ", ", rat_df$Reference, perl = TRUE)
 rat_df$Reference <- gsub(" ,", ",", rat_df$Reference, perl = TRUE)
 unique(rat_df$Reference)
@@ -402,13 +413,13 @@ rat_df$N <- gsub("B", "8", rat_df$N)
 rat_df$N <- gsub("\\?", "2", rat_df$N, perl = TRUE)
 rat_df$N[grep("^NS$", rat_df$N)] <- NA
 
-## TYPE the columns
+# rat_df$Variance[is.na(as.numeric(rat_df$Variance))] # Example check for non-numeric coercion
+## TYPE the numeric columns (Should see no NA coercion warnings here!!)
 rat_df$Age <- as.integer(rat_df$Age)
 rat_df$N <- as.integer(rat_df$N)
 rat_df$Weight <- as.numeric(rat_df$Weight)
 rat_df$Variance <- as.numeric(rat_df$Variance)
 
-# rat_df$Variance[is.na(as.numeric(rat_df$Variance))] # This is to check for non-numeric coercion
 rat_df |>
   # subset(grepl("Sprague", Species)) |>
   ggplot(aes(as.numeric(Age), as.numeric(Weight), color = Sex)) +
