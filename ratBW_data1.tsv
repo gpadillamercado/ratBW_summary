@@ -1,0 +1,802 @@
+Species	Sex	N	Age	Weight	Variance	Reference
+ACP 9935/Cr	female	20	1	0.0051	2.25e-8	Poiley, 1972
+ACP 9935/Cr	female	21	7	0.0103	8.56e-7	Poiley, 1972
+ACP 9935/Cr	female	23	14	0.0199	3.61e-6	Poiley, 1972
+ACP 9935/Cr	female	31	21	0.033	3.9e-6	Poiley, 1972
+ACP 9935/Cr	female	31	28	0.0446	1.62e-5	Poiley, 1972
+ACP 9935/Cr	female	24	42	0.0877	1.4e-4	Poiley, 1972
+ACP 9935/Cr	female	25	56	0.1249	2.22e-4	Poiley, 1972
+ACP 9935/Cr	female	21	70	0.1378	1.24e-4	Poiley, 1972
+ACP 9935/Cr	female	27	84	0.1638	1.37e-4	Poiley, 1972
+ACP 9935/Cr	female	21	112	0.1812	1.76e-4	Poiley, 1972
+ACP 9935/Cr	female	24	140	0.2133	2.69e-4	Poiley, 1972
+ACP 9935/Cr	female	21	168	0.2531	2.12e-4	Poiley, 1972
+ACP 9935/Cr	male	20	1	0.0052	1.56e-8	Poiley, 1972
+ACP 9935/Cr	male	24	7	0.0119	1.1e-6	Poiley, 1972
+ACP 9935/Cr	male	26	14	0.0212	4.62e-6	Poiley, 1972
+ACP 9935/Cr	male	20	21	0.0341	3.61e-6	Poiley, 1972
+ACP 9935/Cr	male	32	28	0.0464	2.92e-5	Poiley, 1972
+ACP 9935/Cr	male	24	42	0.091	7.92e-5	Poiley, 1972
+ACP 9935/Cr	male	25	56	0.1279	1.81e-4	Poiley, 1972
+ACP 9935/Cr	male	23	70	0.188	3.11e-4	Poiley, 1972
+ACP 9935/Cr	male	21	84	0.2307	4e-4	Poiley, 1972
+ACP 9935/Cr	male	26	112	0.2587	1.4e-4	Poiley, 1972
+ACP 9935/Cr	male	27	140	0.2881	1.7e-4	Poiley, 1972
+ACP 9935/Cr	male	25	168	0.3097	2.34e-4	Poiley, 1972
+ACP 9935/Cr	female	28	1	0.0053	2.5e-9	Poiley, 1972
+ACP 9935/Cr	female	28	7	0.0093	3.03e-7	Poiley, 1972
+ACP 9935/Cr	female	28	14	0.0218	8.1e-7	Poiley, 1972
+ACP 9935/Cr	female	28	21	0.0342	1.63e-6	Poiley, 1972
+ACP 9935/Cr	female	28	28	0.0483	2.26e-7	Poiley, 1972
+ACP 9935/Cr	female	28	42	0.0918	1.85e-5	Poiley, 1972
+ACP 9935/Cr	female	28	56	0.1273	1.11e-4	Poiley, 1972
+ACP 9935/Cr	female	28	70	0.1439	7.92e-5	Poiley, 1972
+ACP 9935/Cr	female	28	84	0.1653	7.98e-6	Poiley, 1972
+ACP 9935/Cr	female	27	112	0.1911	5.44e-5	Poiley, 1972
+ACP 9935/Cr	female	27	140	0.209	5.85e-5	Poiley, 1972
+ACP 9935/Cr	female	27	168	0.2483	9.03e-5	Poiley, 1972
+ACP 9935/Cr	male	32	1	0.0054	6.25e-10	Poiley, 1972
+ACP 9935/Cr	male	32	7	0.0107	5.26e-7	Poiley, 1972
+ACP 9935/Cr	male	32	14	0.0235	1.41e-7	Poiley, 1972
+ACP 9935/Cr	male	32	21	0.0357	1.1e-6	Poiley, 1972
+ACP 9935/Cr	male	32	28	0.0493	6.01e-7	Poiley, 1972
+ACP 9935/Cr	male	32	42	0.0951	5.04e-5	Poiley, 1972
+AC1 9935/Cr	male	32	56	0.1307	1.13e-4	Poiley, 1972
+AC1 9935/Cr	male	31	70	0.1959	4.61e-4	Poiley, 1972
+AC1 9935/Cr	male	31	84	0.2338	4.68e-4	Poiley, 1972
+AC1 9935/Cr	male	29	112	0.2671	3.75e-5	Poiley, 1972
+AC1 9935/Cr	male	29	140	0.2892	2.3e-5	Poiley, 1972
+AC1 9935/Cr	male	29	168	0.3088	8.06e-5	Poiley, 1972
+ALBANY/Cr	female	35	1	0.0071	1.6e-7	Poiley, 1972
+ALBANY/Cr	female	35	7	0.018	2.26e-7	Poiley, 1972
+ALBANY/Cr	female	35	14	0.0303	1.96e-6	Poiley, 1972
+ALBANY/Cr	female	35	21	0.0535	2.53e-5	Poiley, 1972
+ALBANY/Cr	female	25	28	0.0798	4.36e-5	Poiley, 1972
+ALBANY/Cr	female	31	42	0.1214	7.29e-6	Poiley, 1972
+ALBANY/Cr	female	45	56	0.1726	2.06e-4	Poiley, 1972
+ALBANY/Cr	female	36	70	0.2093	2.73e-4	Poiley, 1972
+ALBANY/Cr	female	29	84	0.2413	1.93e-4	Poiley, 1972
+ALBANY/Cr	female	36	112	0.2468	1.33e-4	Poiley, 1972
+ALBANY/Cr	female	31	140	0.2574	7.27e-5	Poiley, 1972
+ALBANY/Cr	female	28	168	0.2642	6.32e-5	Poiley, 1972
+ALBANY/Cr	male	35	1	0.0072	9e-8	Poiley, 1972
+ALBANY/Cr	male	35	7	0.0191	1.41e-7	Poiley, 1972
+ALBANY/Cr	male	35	14	0.0327	2.25e-6	Poiley, 1972
+ALBANY/Cr	male	35	21	0.0553	2.05e-5	Poiley, 1972
+ALBANY/Cr	male	35	28	0.0816	5.04e-5	Poiley, 1972
+ALBANY/Cr	male	28	42	0.158	8.88e-5	Poiley, 1972
+ALBANY/Cr	male	25	56	0.1968	1.43e-4	Poiley, 1972
+ALBANY/Cr	male	35	70	0.2695	3.14e-4	Poiley, 1972
+ALBANY/Cr	male	37	84	0.332	1.89e-4	Poiley, 1972
+ALBANY/Cr	male	43	112	0.3598	1.29e-4	Poiley, 1972
+ALBANY/Cr	male	29	140	0.3857	1.08e-4	Poiley, 1972
+ALBANY/Cr	male	32	168	0.3969	7.61e-5	Poiley, 1972
+August 28807/Cr	female	34	1	0.0059	5.26e-7	Poiley, 1972
+August 28807/Cr	female	37	7	0.0125	6.38e-6	Poiley, 1972
+August 28807/Cr	female	43	14	0.027	1.04e-5	Poiley, 1972
+August 28807/Cr	female	32	21	0.0404	2.86e-5	Poiley, 1972
+August 28807/Cr	female	31	28	0.0639	7.92e-5	Poiley, 1972
+August 28807/Cr	female	28	42	0.112	9.65e-5	Poiley, 1972
+August 28807/Cr	female	28	56	0.1289	2.68e-5	Poiley, 1972
+August 28807/Cr	female	24	70	0.1512	1.07e-4	Poiley, 1972
+August 28807/Cr	female	26	84	0.1628	6.4e-5	Poiley, 1972
+August 28807/Cr	female	28	112	0.188	5.85e-5	Poiley, 1972
+August 28807/Cr	female	24	140	0.1986	3.6e-5	Poiley, 1972
+August 28807/Cr	female	28	168	0.2068	6.05e-5	Poiley, 1972
+August 28807/Cr	female	25	196	0.2282	5.11e-5	Poiley, 1972
+August 28807/Cr	male	35	1	0.0061	4.9e-7	Poiley, 1972
+August 28807/Cr	male	33	7	0.0138	4.52e-6	Poiley, 1972
+August 28807/Cr	male	32	14	0.0286	1.5e-5	Poiley, 1972
+August 28807/Cr	male	32	21	0.0426	2.92e-5	Poiley, 1972
+August 28807/Cr	male	25	28	0.0677	4.69e-5	Poiley, 1972
+August 28807/Cr	male	27	42	0.1326	1.19e-4	Poiley, 1972
+August 28807/Cr	male	28	56	0.1915	1.3e-4	Poiley, 1972
+August 28807/Cr	male	25	70	0.2365	2.89e-4	Poiley, 1972
+August 28807/Cr	male	24	84	0.2654	4.31e-4	Poiley, 1972
+August 28807/Cr	male	22	112	0.3004	2.66e-4	Poiley, 1972
+August 28807/Cr	male	27	140	0.3262	1.58e-4	Poiley, 1972
+August 28807/Cr	male	23	168	0.3401	2.19e-4	Poiley, 1972
+August 28807/Cr	male	25	196	0.3644	2.73e-5	Poiley, 1972
+Bald	female	8	30	0.05	NA	Inazu et al., 1984
+Bald	female	8	91	0.22	NA	Inazu et al., 1984
+Bald	female	8	183	0.26	NA	Inazu et al., 1984
+Bald	female	8	365	0.28	NA	Inazu et al., 1984
+Bald	male	8	30	0.06	NA	Inazu et al., 1984
+Bald	male	8	91	0.29	NA	Inazu et al., 1984
+Bald	male	8	183	0.31	NA	Inazu et al., 1984
+Bald	male	8	365	0.39	NA	Inazu et al., 1984
+BHE	female	27	50	0.169	3.6e-5	NAS, 1971
+BHE	female	38	100	0.24	2.5e-5	NAS, 1971
+BHE	female	45	300	0.319	2.5e-5	NAS, 1971
+BHE	male	29	50	0.232	3.6e-5	NAS, 1971
+BHE	male	37	100	0.364	2.5e-5	NAS, 1971
+BHE	male	45	300	0.499	2.5e-5	NAS, 1971
+Black	female	1	1	0.004	NA	Worden, 1947
+Black	female	1	3	0.006	NA	Worden, 1947
+Black	female	1	5	0.008	NA	Worden, 1947
+Black	female	1	7	0.009	NA	Worden, 1947
+Black	female	1	9	0.011	NA	Worden, 1947
+Black	female	1	11	0.012	NA	Worden, 1947
+Black	female	1	13	0.013	NA	Worden, 1947
+Black	female	1	15	0.015	NA	Worden, 1947
+Black	female	1	17	0.017	NA	Worden, 1947
+Black	female	1	19	0.02	NA	Worden, 1947
+Black	female	1	21	0.023	NA	Worden, 1947
+Black	female	1	23	0.026	NA	Worden, 1947
+Black	female	1	25	0.028	NA	Worden, 1947
+Black	female	1	27	0.03	NA	Worden, 1947
+Black	female	1	29	0.031	NA	Worden, 1947
+Black	female	1	31	0.033	NA	Worden, 1947
+Black	female	1	33	0.036	NA	Worden, 1947
+Black	female	1	35	0.037	NA	Worden, 1947
+Black	female	1	65	0.108	NA	Worden, 1947
+Black	female	1	96	0.17	NA	Worden, 1947
+Black	female	1	126	0.19	NA	Worden, 1947
+Black	female	1	157	0.196	NA	Worden, 1947
+Black	female	1	188	0.193	NA	Worden, 1947
+Black	female	1	247	0.193	NA	Worden, 1947
+Black	female	1	308	0.197	NA	Worden, 1947
+Black	female	1	338	0.197	NA	Worden, 1947
+Black	female	1	369	0.197	NA	Worden, 1947
+Black	male	1	1	0.005	NA	Worden, 1947
+Black	male	1	3	0.007	NA	Worden, 1947
+Black	male	1	5	0.009	NA	Worden, 1947
+Black	male	1	7	0.011	NA	Worden, 1947
+Black	male	1	9	0.014	NA	Worden, 1947
+Black	male	1	11	0.018	NA	Worden, 1947
+Black	male	1	13	0.02	NA	Worden, 1947
+Black	male	1	15	0.022	NA	Worden, 1947
+Black	male	1	17	0.023	NA	Worden, 1947
+Black	male	1	19	0.025	NA	Worden, 1947
+Black	male	1	21	0.026	NA	Worden, 1947
+Black	male	1	23	0.028	NA	Worden, 1947
+Black	male	1	25	0.029	NA	Worden, 1947
+Black	male	1	27	0.031	NA	Worden, 1947
+Black	male	1	29	0.033	NA	Worden, 1947
+Black	male	1	31	0.036	NA	Worden, 1947
+Black	male	1	33	0.04	NA	Worden, 1947
+Black	male	1	65	0.12	NA	Worden, 1947
+Black	male	1	96	0.19	NA	Worden, 1947
+Black	male	1	126	0.201	NA	Worden, 1947
+Black	male	1	157	0.208	NA	Worden, 1947
+Black	male	1	188	0.202	NA	Worden, 1947
+Black	male	1	216	0.2	NA	Worden, 1947
+Black	male	1	247	0.204	NA	Worden, 1947
+Black	male	1	369	0.211	NA	Worden, 1947
+BN/Cr	female	29	1	0.0061	5.63e-7	Poiley, 1972
+BN/Cr	female	27	7	0.0128	6.25e-6	Poiley, 1972
+BN/Cr	female	26	14	0.028	1.81e-5	Poiley, 1972
+BN/Cr	female	27	21	0.0437	3.16e-5	Poiley, 1972
+BN/Cr	female	45	28	0.062	5.26e-5	Poiley, 1972
+BN/Cr	female	29	42	0.0968	5.81e-5	Poiley, 1972
+BN/Cr	female	34	56	0.1286	9.02e-5	Poiley, 1972
+BN/Cr	female	29	70	0.1521	1.32e-4	Poiley, 1972
+BN/Cr	female	35	84	0.1673	6.81e-5	Poiley, 1972
+BN/Cr	female	25	112	0.1791	9.03e-5	Poiley, 1972
+BN/Cr	female	24	140	0.1876	1.38e-4	Poiley, 1972
+BN/Cr	female	24	168	0.2068	1.16e-4	Poiley, 1972
+BN/Cr	male	30	1	0.0062	5.63e-7	Poiley, 1972
+BN/Cr	male	29	7	0.0139	6.89e-6	Poiley, 1972
+BN/Cr	male	27	14	0.029	2.14e-5	Poiley, 1972
+BN/Cr	male	25	21	0.0448	3.02e-5	Poiley, 1972
+BN/Cr	male	43	28	0.0673	1.16e-4	Poiley, 1972
+BN/Cr	male	29	42	0.1242	1.63e-4	Poiley, 1972
+BN/Cr	male	38	56	0.1934	1.35e-4	Poiley, 1972
+BN/Cr	male	34	70	0.2474	6.89e-4	Poiley, 1972
+BN/Cr	male	33	84	0.2644	5.18e-4	Poiley, 1972
+BN/Cr	male	26	112	0.304	5.29e-4	Poiley, 1972
+BN/Cr	male	25	140	0.3217	2.1e-4	Poiley, 1972
+BN/Cr	male	25	168	0.3411	4.1e-4	Poiley, 1972
+BUFFALO/Cr	female	35	1	0.0055	1.56e-8	Poiley, 1972
+BUFFALO/Cr	female	35	7	0.0121	1.06e-7	Poiley, 1972
+BUFFALO/Cr	female	35	14	0.0224	5.88e-6	Poiley, 1972
+BUFFALO/Cr	female	35	21	0.0278	8.41e-6	Poiley, 1972
+BUFFALO/Cr	female	35	28	0.0594	6.12e-5	Poiley, 1972
+BUFFALO/Cr	female	29	42	0.1197	8.51e-5	Poiley, 1972
+BUFFALO/Cr	female	28	56	0.152	1.51e-4	Poiley, 1972
+BUFFALO/Cr	female	36	70	0.1786	2.12e-4	Poiley, 1972
+BUFFALO/Cr	female	39	84	0.2269	1.54e-4	Poiley, 1972
+BUFFALO/Cr	female	38	112	0.2377	1.4e-4	Poiley, 1972
+BUFFALO/Cr	female	32	140	0.2464	1.61e-4	Poiley, 1972
+BUFFALO/Cr	female	35	168	0.2521	1.36e-4	Poiley, 1972
+BUFFALO/Cr	male	35	1	0.0064	1.56e-8	Poiley, 1972
+BUFFALO/Cr	male	35	7	0.0133	9e-8	Poiley, 1972
+BUFFALO/Cr	male	35	14	0.0262	3.61e-6	Poiley, 1972
+BUFFALO/Cr	male	35	21	0.0448	3.57e-5	Poiley, 1972
+BUFFALO/Cr	male	35	28	0.0743	6.89e-5	Poiley, 1972
+BUFFALO/Cr	male	24	42	0.1394	5.08e-5	Poiley, 1972
+BUFFALO/Cr	male	22	56	0.1917	1.54e-4	Poiley, 1972
+BUFFALO/Cr	male	30	70	0.2531	1.63e-4	Poiley, 1972
+BUFFALO/Cr	male	26	84	0.3289	4.3e-4	Poiley, 1972
+BUFFALO/Cr	male	31	112	0.3338	2.21e-4	Poiley, 1972
+BUFFALO/Cr	male	30	140	0.3744	3.62e-4	Poiley, 1972
+BUFFALO/Cr	male	30	168	0.3886	2.72e-4	Poiley, 1972
+Copenhagen/Cr	female	25	1	0.0057	5.62e-9	Poiley, 1972
+Copenhagen/Cr	female	25	7	0.0129	8.56e-7	Poiley, 1972
+Copenhagen/Cr	female	25	14	0.0244	6.81e-7	Poiley, 1972
+Copenhagen/Cr	female	25	21	0.0266	4.52e-6	Poiley, 1972
+Copenhagen/Cr	female	25	28	0.0485	2.48e-5	Poiley, 1972
+Copenhagen/Cr	female	25	42	0.0945	1.06e-4	Poiley, 1972
+Copenhagen/Cr	female	26	56	0.1594	8.6e-5	Poiley, 1972
+Copenhagen/Cr	female	27	70	0.1789	5.08e-5	Poiley, 1972
+Copenhagen/Cr	female	28	84	0.1857	4.94e-5	Poiley, 1972
+Copenhagen/Cr	female	25	112	0.1998	7.48e-5	Poiley, 1972
+Copenhagen/Cr	female	24	140	0.2266	1.62e-4	Poiley, 1972
+Copenhagen/Cr	female	26	168	0.2333	9.26e-5	Poiley, 1972
+Copenhagen/Cr	male	25	1	0.0058	5.62e-9	Poiley, 1972
+Copenhagen/Cr	male	25	7	0.0141	1.05e-6	Poiley, 1972
+Copenhagen/Cr	male	25	14	0.0272	1.38e-6	Poiley, 1972
+Copenhagen/Cr	male	25	21	0.0307	3.52e-6	Poiley, 1972
+Copenhagen/Cr	male	25	28	0.055	1.14e-5	Poiley, 1972
+Copenhagen/Cr	male	25	42	0.1047	8.1e-5	Poiley, 1972
+Copenhagen/Cr	male	24	56	0.2038	1.7e-4	Poiley, 1972
+Copenhagen/Cr	male	25	70	0.24	1.4e-4	Poiley, 1972
+Copenhagen/Cr	male	26	84	0.2696	2.14e-5	Poiley, 1972
+Copenhagen/Cr	male	27	112	0.283	1.18e-4	Poiley, 1972
+Copenhagen/Cr	male	31	140	0.31	1.36e-4	Poiley, 1972
+Copenhagen/Cr	male	26	168	0.3346	7.01e-5	Poiley, 1972
+Cpb:WU	male	1	365	0.628	NA	Haas et al., 1985
+Cpb:WU	male	1	456	0.656	NA	Haas et al., 1985
+Cpb:WU	male	1	456	0.656	NA	Haas et al., 1985
+Cr:MGAPS(OM)	female	21	1	0.0058	2.76e-7	Poiley, 1972
+Cr:MGAPS(OM)	female	21	7	0.0109	1.56e-6	Poiley, 1972
+Cr:MGAPS(OM)	female	21	14	0.0332	1.23e-5	Poiley, 1972
+Cr:MGAPS(OM)	female	21	21	0.0484	3.75e-5	Poiley, 1972
+Cr:MGAPS(OM)	female	21	28	0.0639	4.26e-5	Poiley, 1972
+Cr:MGAPS(OM)	female	20	42	0.1137	2.63e-5	Poiley, 1972
+Cr:MGAPS(OM)	female	20	56	0.1752	2.72e-4	Poiley, 1972
+Cr:MGAPS(OM)	female	20	70	0.2155	5.12e-4	Poiley, 1972
+Cr:MGAPS(OM)	female	20	84	0.258	4.36e-4	Poiley, 1972
+Cr:MGAPS(OM)	female	20	112	0.2838	3.95e-4	Poiley, 1972
+Cr:MGAPS(OM)	female	20	140	0.2991	3.85e-4	Poiley, 1972
+Cr:MGAPS(OM)	male	21	1	0.0061	4.22e-7	Poiley, 1972
+Cr:MGAPS(OM)	male	21	7	0.0116	1.56e-6	Poiley, 1972
+Cr:MGAPS(OM)	male	21	14	0.0354	1.41e-5	Poiley, 1972
+Cr:MGAPS(OM)	male	21	21	0.0551	9e-6	Poiley, 1972
+Cr:MGAPS(OM)	male	21	28	0.0791	7.23e-5	Poiley, 1972
+Cr:MGAPS(OM)	male	20	42	0.1435	5.44e-5	Poiley, 1972
+Cr:MGAPS(OM)	male	20	56	0.2367	5.01e-4	Poiley, 1972
+Cr:MGAPS(OM)	male	20	70	0.2812	4.1e-4	Poiley, 1972
+Cr:MGAPS(OM)	male	20	84	0.3274	4.36e-4	Poiley, 1972
+Cr:MGAPS(OM)	male	20	112	0.3928	7.16e-4	Poiley, 1972
+Cr:MGAPS(OM)	male	20	140	0.4619	0.00114	Poiley, 1972
+Cr:RAR(SD)	female	49	1	0.0065	2.26e-7	Poiley, 1972
+Cr:RAR(SD)	female	51	7	0.016	1.09e-5	Poiley, 1972
+Cr:RAR(SD)	female	46	14	0.0408	2.03e-5	Poiley, 1972
+Cr:RAR(SD)	female	43	21	0.0556	2.03e-5	Poiley, 1972
+Cr:RAR(SD)	female	44	28	0.0949	2.18e-4	Poiley, 1972
+Cr:RAR(SD)	female	49	42	0.1534	3.42e-5	Poiley, 1972
+Cr:RAR(SD)	female	54	56	0.202	1.94e-5	Poiley, 1972
+Cr:RAR(SD)	female	47	70	0.2391	1.46e-4	Poiley, 1972
+Cr:RAR(SD)	female	57	84	0.2466	1.68e-4	Poiley, 1972
+Cr:RAR(SD)	female	38	112	0.2599	1.28e-4	Poiley, 1972
+Cr:RAR(SD)	female	42	140	0.2812	1.03e-4	Poiley, 1972
+Cr:RAR(SD)	female	40	168	0.2884	4.36e-5	Poiley, 1972
+Cr:RAR(SD)	female	33	196	0.2918	4.16e-5	Poiley, 1972
+Cr:RAR(SD)	male	54	1	0.0067	2.5e-7	Poiley, 1972
+Cr:RAR(SD)	male	46	7	0.0182	2.81e-6	Poiley, 1972
+Cr:RAR(SD)	male	56	14	0.043	5.81e-5	Poiley, 1972
+Cr:RAR(SD)	male	47	21	0.0594	7.98e-6	Poiley, 1972
+Cr:RAR(SD)	male	47	28	0.0989	1.13e-4	Poiley, 1972
+Cr:RAR(SD)	male	55	42	0.1623	3e-4	Poiley, 1972
+Cr:RAR(SD)	male	48	56	0.2357	1.78e-4	Poiley, 1972
+Cr:RAR(SD)	male	41	70	0.2927	2.32e-4	Poiley, 1972
+Cr:RAR(SD)	male	53	84	0.3587	2.88e-4	Poiley, 1972
+Cr:RAR(SD)	male	49	112	0.388	3.48e-4	Poiley, 1972
+Cr:RAR(SD)	male	37	140	0.4394	1.91e-4	Poiley, 1972
+Cr:RAR(SD)	male	45	168	0.452	1.31e-4	Poiley, 1972
+Cr:RAR(SD)	male	31	196	0.4912	2.07e-4	Poiley, 1972
+Fischer F344	female	3167	42	0.075	NA	Cameron et al, 1985
+Fischer F344	female	3167	56	0.1	NA	Cameron et al, 1985
+Fischer F344	female	3167	70	0.12	NA	Cameron et al, 1985
+Fischer F344	female	3167	77	0.145	NA	Cameron et al, 1985
+Fischer F344	female	3167	91	0.165	NA	Cameron et al, 1985
+Fischer F344	female	3167	119	0.185	NA	Cameron et al, 1985
+Fischer F344	female	3167	147	0.19	NA	Cameron et al, 1985
+Fischer F344	female	3167	217	0.215	NA	Cameron et al, 1985
+Fischer F344	female	3167	315	0.225	NA	Cameron et al, 1985
+Fischer F344	female	3167	567	0.28	NA	Cameron et al, 1985
+Fischer F344	female	3167	770	0.305	NA	Cameron et al, 1985
+Fischer F344	female	3167	770	0.305	NA	Cameron et al, 1985
+Fischer F344	female	3167	770	0.305	NA	Cameron et al, 1985
+Fischer F344	female	20	77	0.1461	NA	Dorato et al, 1983
+Fischer F344	female	19	91	0.1579	2.02e-4	Dorato et al, 1983
+Fischer F344	female	19	112	0.1667	NA	Dorato et al, 1983
+Fischer F344	female	19	161	0.18	NA	Dorato et al, 1983
+Fischer F344	female	19	196	0.1908	NA	Dorato et al, 1983
+Fischer F344	female	19	238	0.194	NA	Dorato et al, 1983
+Fischer F344	female	19	280	0.2014	NA	Dorato et al, 1983
+Fischer F344	female	19	322	0.2069	NA	Dorato et al, 1983
+Fischer F344	female	120	102	0.16695	2.33e-6	Morrissey and Norred, 1984
+Fischer F344	female	NA	28	0.044	NA	NAS, 1978
+Fischer F344	female	NA	35	0.065	NA	NAS, 1978
+Fischer F344	female	NA	56	0.123	NA	NAS, 1978
+Fischer F344	female	NA	70	0.145	NA	NAS, 1978
+Fischer F344	female	NA	84	0.162	NA	NAS, 1978
+Fischer F344	female	529	49	0.12	NA	Solleveld et al, 1984
+Fischer F344	female	529	119	0.18	NA	Solleveld et al, 1984
+Fischer F344	female	529	189	0.205	NA	Solleveld et al, 1984
+Fischer F344	female	529	259	0.21	NA	Solleveld et al, 1984
+Fischer F344	female	529	329	0.235	NA	Solleveld et al, 1984
+Fischer F344	female	529	399	0.265	NA	Solleveld et al, 1984
+Fischer F344	female	529	469	0.28	NA	Solleveld et al, 1984
+Fischer F344	female	529	539	0.31	NA	Solleveld et al, 1984
+Fischer F344	female	529	609	0.325	NA	Solleveld et al, 1984
+Fischer F344	female	529	679	0.33	NA	Solleveld et al, 1984
+Fischer F344	female	529	749	0.33	NA	Solleveld et al, 1984
+Fischer F344	female	529	819	0.325	NA	Solleveld et al, 1984
+Fischer F344	female	529	889	0.32	NA	Solleveld et al, 1984
+Fischer F344	female	529	959	0.31	NA	Solleveld et al, 1984
+Fischer F344	female	529	1029	0.285	NA	Solleveld et al, 1984
+Fischer F344	male	3225	42	0.075	NA	Cameron et al, 1985
+Fischer F344	male	3225	56	0.125	NA	Cameron et al, 1985
+Fischer F344	male	3225	77	0.18	NA	Cameron et al, 1985
+Fischer F344	male	3225	91	0.23	NA	Cameron et al, 1985
+Fischer F344	male	3225	112	0.26	NA	Cameron et al, 1985
+Fischer F344	male	3225	133	0.29	NA	Cameron et al, 1985
+Fischer F344	male	3225	140	0.31	NA	Cameron et al, 1985
+Fischer F344	male	3225	147	0.325	NA	Cameron et al, 1985
+Fischer F344	male	3225	217	0.355	NA	Cameron et al, 1985
+Fischer F344	male	3225	259	0.38	NA	Cameron et al, 1985
+Fischer F344	male	3225	343	0.41	NA	Cameron et al, 1985
+Fischer F344	male	3225	427	0.415	NA	Cameron et al, 1985
+Fischer F344	male	3225	525	0.42	NA	Cameron et al, 1985
+Fischer F344	male	3225	602	0.42	NA	Cameron et al, 1985
+Fischer F344	male	3225	693	0.425	NA	Cameron et al, 1985
+Fischer F344	male	3225	770	0.41	NA	Cameron et al, 1985
+Fischer F344	male	20	77	0.2184	NA	Dorato et al, 1983
+Fischer F344	male	20	91	0.2485	NA	Dorato et al, 1983
+Fischer F344	male	20	112	0.2798	NA	Dorato et al, 1983
+Fischer F344	male	20	161	0.3178	NA	Dorato et al, 1983
+Fischer F344	male	20	196	0.3428	NA	Dorato et al, 1983
+Fischer F344	male	20	238	0.3663	NA	Dorato et al, 1983
+Fischer F344	male	20	280	0.3888	NA	Dorato et al, 1983
+Fischer F344	male	20	322	0.4095	NA	Dorato et al, 1983
+Fischer F344	male	NA	28	0.053	NA	NAS, 1978
+Fischer F344	male	NA	35	0.08	NA	NAS, 1978
+Fischer F344	male	NA	56	0.16	NA	NAS, 1978
+Fischer F344	male	NA	70	0.213	NA	NAS, 1978
+Fischer F344	male	NA	84	0.256	NA	NAS, 1978
+Fischer F344	male	529	49	0.13	NA	Solleveld et al, 1984
+Fischer F344	male	529	119	0.31	NA	Solleveld et al, 1984
+Fischer F344	male	529	189	0.355	NA	Solleveld et al, 1984
+Fischer F344	male	529	259	0.385	NA	Solleveld et al, 1984
+Fischer F344	male	529	329	0.42	NA	Solleveld et al, 1984
+Fischer F344	male	529	399	0.425	NA	Solleveld et al, 1984
+Fischer F344	male	529	469	0.46	NA	Solleveld et al, 1984
+Fischer F344	male	529	539	0.47	NA	Solleveld et al, 1984
+Fischer F344	male	529	609	0.46	NA	Solleveld et al, 1984
+Fischer F344	male	529	679	0.468	NA	Solleveld et al, 1984
+Fischer F344	male	529	749	0.435	NA	Solleveld et al, 1984
+Fischer F344	male	529	819	0.425	NA	Solleveld et al, 1984
+Fischer F344	male	529	889	0.39	NA	Solleveld et al, 1984
+Fischer F344	male	529	959	0.345	NA	Solleveld et al, 1984
+Fischer F344	male	10	32	0.072	1.94e-5	Tlllerey and Lehnert, 1986
+Fischer F344	male	10	37	0.0957	1.23e-5	Tlllerey and Lehnert, 1986
+Fischer F344	male	10	55	0.1676	3.48e-5	Tlllerey and Lehnert, 1986
+Fischer F344	male	10	59	0.1681	1.68e-5	Tlllerey and Lehnert, 1986
+Fischer F344	male	10	74	0.2016	2.3e-5	Tlllerey and Lehnert, 1986
+Fischer F344	male	20	98	0.2717	2.13e-4	Tlllerey and Lehnert, 1986
+Fischer F344	male	10	126	0.3045	2.1e-4	Tlllerey and Lehnert, 1986
+Fischer F344	male	20	135	0.3031	1.37e-4	Tlllerey and Lehnert, 1986
+Fischer 334/Cr	female	68	1	0.0055	3.31e-7	Poiley, 1972
+Fischer 334/Cr	female	45	7	0.0113	1.1e-6	Poiley, 1972
+Fischer 334/Cr	female	45	14	0.0201	4.52e-6	Poiley, 1972
+Fischer 334/Cr	female	61	21	0.0299	1.7e-5	Poiley, 1972
+Fischer 334/Cr	female	58	28	0.0477	1.64e-5	Poiley, 1972
+Fischer 334/Cr	female	60	42	0.0863	1.47e-4	Poiley, 1972
+Fischer 334/Cr	female	58	56	0.1255	1.63e-4	Poiley, 1972
+Fischer 334/Cr	female	46	70	0.1483	2.05e-4	Poiley, 1972
+Fischer 334/Cr	female	42	84	0.15310000000000001	2.48e-4	Poiley, 1972
+Fischer 334/Cr	female	66	112	0.1805	8.1e-5	Poiley, 1972
+Fischer 334/Cr	female	54	140	0.215	3.6e-5	Poiley, 1972
+Fischer 334/Cr	female	54	168	0.2189	7.66e-5	Poiley, 1972
+Fischer 334/Cr	male	75	1	0.0059	1.27e-6	Poiley, 1972
+Fischer 334/Cr	male	48	7	0.012	1e-6	Poiley, 1972
+Fischer 334/Cr	male	38	14	0.0263	1.23e-5	Poiley, 1972
+Fischer 334/Cr	male	52	21	0.0307	1.41e-5	Poiley, 1972
+Fischer 334/Cr	male	49	28	0.0542	4.9e-5	Poiley, 1972
+Fischer 334/Cr	male	48	42	0.1051	1.17e-4	Poiley, 1972
+Fischer 334/Cr	male	66	56	0.1811	1.82e-4	Poiley, 1972
+Fischer 334/Cr	male	56	70	0.2445	5.64e-4	Poiley, 1972
+Fischer 334/Cr	male	46	84	0.2059	1.91e-4	Poiley, 1972
+Fischer 334/Cr	male	66	112	0.3042	4.9e-5	Poiley, 1972
+Fischer 334/Cr	male	53	140	0.313	9.03e-5	Poiley, 1972
+Fischer 334/Cr	male	56	168	0.3354	2.89e-4	Poiley, 1972
+F334/Crl Lov	female	10	91	0.145	7.29e-4	Mauderly, 1986
+F334/Crl Lov	female	10	183	0.199	2.56e-4	Mauderly, 1986
+F334/Crl Lov	female	10	365	0.219	3.24e-4	Mauderly, 1986
+F334/Crl Lov	female	10	730	0.255	6.25e-4	Mauderly, 1986
+F334/Crl Lov	male	10	91	0.291	3.61e-4	Mauderly, 1986
+F334/Crl Lov	male	10	183	0.336	0.00123	Mauderly, 1986
+F334/Crl Lov	male	10	365	0.368	4.84e-4	Mauderly, 1986
+F334/Crl Lov	male	10	730	0.407	7.84e-4	Mauderly, 1986
+F334/Crl Lov	both	20	91	0.182	0.00212	Mauderly, 1986
+F334/Crl Lov	both	20	183	0.267	0.00518	Mauderly, 1986
+F334/Crl Lov	both	20	365	0.293	0.00593	Mauderly, 1986
+F334/Crl Lov	both	20	730	0.331	0.00656	Mauderly, 1986
+Holtzman	female	11	200	0.224	1.76e-5	Harriman, 1969b
+Holtzman	female	11	200	0.224	1.76e-5	Harriman, 1969b
+Long-Evans	female	24	1	0.0061	5.26e-7	Poiley, 1972
+Long-Evans	female	24	7	0.0137	6.89e-6	Poiley, 1972
+Long-Evans	female	24	14	0.0286	7.29e-6	Poiley, 1972
+Long-Evans	female	24	21	0.0383	4.62e-5	Poiley, 1972
+Long-Evans	female	24	28	0.0614	6.05e-5	Poiley, 1972
+Long-Evans	female	24	42	0.1269	8.56e-6	Poiley, 1972
+Long-Evans	female	24	56	0.1687	1.76e-4	Poiley, 1972
+Long-Evans	female	24	70	0.2005	5.43e-4	Poiley, 1972
+Long-Evans	female	24	84	0.2382	1.8e-4	Poiley, 1972
+Long-Evans	female	24	112	0.2528	3.54e-4	Poiley, 1972
+Long-Evans	female	24	140	0.2626	3.19e-4	Poiley, 1972
+Long-Evans	male	54	182	0.41	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	304	0.45	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	335	0.475	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	365	0.5	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	395	0.51	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	426	0.515	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	456	0.53	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	487	0.54	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	517	0.55	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	548	0.545	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	578	0.56	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	608	0.575	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	639	0.575	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	669	0.58	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	700	0.585	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	730	0.59	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	760	0.59	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	791	0.595	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	821	0.6	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	852	0.59	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	882	0.575	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	913	0.55	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	943	0.535	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	973	0.535	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	1004	0.495	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	1034	0.52	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	1065	0.51	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	1095	0.485	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	1125	0.5	NA	Holloszy and Smith, 1986
+Long-Evans	male	54	1156	0.48	NA	Holloszy and Smith, 1986
+Long-Evans	male	24	1	0.0066	6.01e-7	Poiley, 1972
+Long-Evans	male	24	7	0.0147	4.84e-6	Poiley, 1972
+Long-Evans	male	24	14	0.0314	1.62e-5	Poiley, 1972
+Long-Evans	male	24	21	0.04	5.15e-5	Poiley, 1972
+Long-Evans	male	24	28	0.0724	5.04e-5	Poiley, 1972
+Long-Evans	male	24	42	0.1519	0.00802	Poiley, 1972
+Long-Evans	male	24	56	0.2304	4.19e-4	Poiley, 1972
+Long-Evans	male	24	70	0.2967	4.85e-4	Poiley, 1972
+Long-Evans	male	24	84	0.3366	2.58e-4	Poiley, 1972
+Long-Evans	male	24	112	0.3621	3.07e-4	Poiley, 1972
+Long-Evans	male	24	140	0.3843	3.53e-4	Poiley, 1972
+Marshall 520/Cr	female	30	1	0.0059	6.81e-7	Poiley, 1972
+Marshall 520/Cr	female	26	7	0.0143	3.42e-6	Poiley, 1972
+Marshall 520/Cr	female	28	14	0.0237	1.24e-5	Poiley, 1972
+Marshall 520/Cr	female	27	21	0.0328	1.21e-5	Poiley, 1972
+Marshall 520/Cr	female	34	28	0.0547	9e-6	Poiley, 1972
+Marshall 520/Cr	female	26	42	0.1151	2.35e-5	Poiley, 1972
+Marshall 520/Cr	female	26	56	0.1246	5.48e-5	Poiley, 1972
+Marshall 520/Cr	female	24	70	0.1548	7.88e-5	Poiley, 1972
+Marshall 520/Cr	female	27	84	0.1668	1.02e-4	Poiley, 1972
+Marshall 520/Cr	female	25	112	0.2098	1.43e-4	Poiley, 1972
+Marshall 520/Cr	female	24	140	0.2315	2.05e-4	Poiley, 1972
+Marshall 520/Cr	female	26	168	0.2546	1.11e-4	Poiley, 1972
+Marshall 520/Cr	male	28	1	0.006	5.63e-7	Poiley, 1972
+Marshall 520/Cr	male	26	7	0.0163	4.2e-6	Poiley, 1972
+Marshall 520/Cr	male	28	14	0.026	1.14e-5	Poiley, 1972
+Marshall 520/Cr	male	31	21	0.0407	2.5e-5	Poiley, 1972
+Marshall 520/Cr	male	21	28	0.0619	5.06e-6	Poiley, 1972
+Marshall 520/Cr	male	26	42	0.1335	4.62e-5	Poiley, 1972
+Marshall 520/Cr	male	26	56	0.1923	3.12e-4	Poiley, 1972
+Marshall 520/Cr	male	25	70	0.246	2.1e-4	Poiley, 1972
+Marshall 520/Cr	male	24	84	0.2956	2.88e-4	Poiley, 1972
+Marshall 520/Cr	male	25	112	0.3303	4.32e-4	Poiley, 1972
+Marshall 520/Cr	male	27	140	0.3699	5.03e-4	Poiley, 1972
+Marshall 520/Cr	male	23	168	0.3788	3.76e-4	Poiley, 1972
+NBR/PlCr	female	25	1	0.0058	1e-8	Poiley, 1972
+NBR/PlCr	female	25	7	0.0124	1e-8	Poiley, 1972
+NBR/PlCr	female	25	14	0.0236	1.23e-7	Poiley, 1972
+NBR/PlCr	female	25	21	0.0275	2.26e-7	Poiley, 1972
+NBR/PlCr	female	25	28	0.0449	1.28e-5	Poiley, 1972
+NBR/PlCr	female	25	42	0.0936	8.98e-5	Poiley, 1972
+NBR/PlCr	female	25	56	0.1496	7.7e-6	Poiley, 1972
+NBR/PlCr	female	25	70	0.1609	5.4e-5	Poiley, 1972
+NBR/PlCr	female	25	84	0.1723	3.14e-5	Poiley, 1972
+NBR/PlCr	female	25	112	0.1941	2.21e-5	Poiley, 1972
+NBR/PlCr	female	25	140	0.2028	2.48e-5	Poiley, 1972
+NBR/PlCr	female	25	168	0.2266	2.97e-5	Poiley, 1972
+NBR/PlCr	male	25	1	0.0058	2.5e-9	Poiley, 1972
+NBR/PlCr	male	25	7	0.0131	7.56e-8	Poiley, 1972
+NBR/PlCr	male	25	14	0.0252	3.91e-7	Poiley, 1972
+NBR/PlCr	male	25	21	0.0283	1.76e-6	Poiley, 1972
+NBR/PlCr	male	25	28	0.0462	1.54e-5	Poiley, 1972
+NBR/PlCr	male	25	42	0.1018	5.08e-5	Poiley, 1972
+NBR/PlCr	male	25	56	0.1952	6.68e-5	Poiley, 1972
+NBR/PlCr	male	25	70	0.2206	1.58e-5	Poiley, 1972
+NBR/PlCr	male	25	84	0.2489	4.03e-5	Poiley, 1972
+NBR/PlCr	male	25	112	0.2791	4.52e-5	Poiley, 1972
+NBR/PlCr	male	25	140	0.2913	6.89e-5	Poiley, 1972
+NBR/PlCr	male	25	168	0.3155	4.52e-5	Poiley, 1972
+NA	male	NA	21	0.03138	NA	Rios et al., 1986a
+NA	male	NA	42	0.10157	NA	Rios et al., 1986a
+NA	male	NA	63	0.18182	NA	Rios et al., 1986a
+NA	male	35	91	0.2377	8.76e-4	Rios et al., 1986b
+NA	male	31	91	0.2498	8.7e-4	Rios et al., 1986b
+NA	both	8	11	0.024	0.00212	Fisher and Mortola, 1981
+NA	both	6	4	0.014	4e-6	Mortola, 1983
+NA	both	4	2	0.0072	1e-8	Mortola, 1984
+Osborne-Mendel	female	24	1	0.0064	3.03e-7	Poiley, 1972
+Osborne-Mendel	female	24	7	0.0159	4.95e-6	Poiley, 1972
+Osborne-Mendel	female	24	14	0.0496	4.95e-6	Poiley, 1972
+Osborne-Mendel	female	24	21	0.052	5.64e-6	Poiley, 1972
+Osborne-Mendel	female	24	28	0.0879	6.12e-5	Poiley, 1972
+Osborne-Mendel	female	26	42	0.1395	1.81e-5	Poiley, 1972
+Osborne-Mendel	female	31	56	0.1892	2.18e-4	Poiley, 1972
+Osborne-Mendel	female	26	70	0.2356	2.21e-4	Poiley, 1972
+Osborne-Mendel	female	32	84	0.2591	9.22e-5	Poiley, 1972
+Osborne-Mendel	female	27	112	0.2744	2.14e-4	Poiley, 1972
+Osborne-Mendel	female	26	140	0.2945	8.79e-5	Poiley, 1972
+Osborne-Mendel	female	25	168	0.3017	4.22e-5	Poiley, 1972
+Osborne-Mendel	female	31	196	0.3054	6.44e-5	Poiley, 1972
+Osborne-Mendel	male	24	1	0.0064	2.5e-7	Poiley, 1972
+Osborne-Mendel	male	24	7	0.0173	2.56e-6	Poiley, 1972
+Osborne-Mendel	male	24	14	0.0517	2.72e-6	Poiley, 1972
+Osborne-Mendel	male	24	21	0.053	6.13e-6	Poiley, 1972
+Osborne-Mendel	male	24	28	0.0943	5.81e-5	Poiley, 1972
+Osborne-Mendel	male	27	42	0.1536	1.41e-4	Poiley, 1972
+Osborne-Mendel	male	24	56	0.2297	5.05e-4	Poiley, 1972
+Osborne-Mendel	male	25	70	0.2955	4.55e-4	Poiley, 1972
+Osborne-Mendel	male	26	84	0.3729	2.62e-4	Poiley, 1972
+Osborne-Mendel	male	28	112	0.3993	5.76e-4	Poiley, 1972
+Osborne-Mendel	male	26	140	0.4513	2.18e-4	Poiley, 1972
+Osborne-Mendel	male	31	168	0.4768	1.29e-4	Poiley, 1972
+Osborne-Mendel	male	24	196	0.5035	1.16e-4	Poiley, 1972
+SH/Cr	female	41	1	0.0055	4.9e-7	Poiley, 1972
+SH/Cr	female	41	7	0.0113	4e-6	Poiley, 1972
+SH/Cr	female	48	14	0.0173	8.85e-6	Poiley, 1972
+SH/Cr	female	41	21	0.04	3e-5	Poiley, 1972
+SH/Cr	female	46	28	0.072	3.08e-5	Poiley, 1972
+SH/Cr	female	44	42	0.11	1.48e-4	Poiley, 1972
+SH/Cr	female	45	56	0.138	9.41e-5	Poiley, 1972
+SH/Cr	female	51	70	0.1574	1.16e-4	Poiley, 1972
+SH/Cr	female	57	84	0.1736	1.39e-4	Poiley, 1972
+SH/Cr	female	48	112	0.1822	1.95e-4	Poiley, 1972
+SH/Cr	male	42	1	0.0062	3.31e-7	Poiley, 1972
+SH/Cr	male	45	7	0.0139	6.76e-6	Poiley, 1972
+SH/Cr	male	46	14	0.0217	1.63e-6	Poiley, 1972
+SH/Cr	male	47	21	0.0424	2.89e-5	Poiley, 1972
+SH/Cr	male	38	28	0.0771	5.08e-5	Poiley, 1972
+SH/Cr	male	47	42	0.1255	1.8e-4	Poiley, 1972
+SH/Cr	male	47	56	0.1855	1.23e-4	Poiley, 1972
+SH/Cr	male	46	70	0.2398	2.12e-4	Poiley, 1972
+SH/Cr	male	55	84	0.2625	3.07e-4	Poiley, 1972
+SH/Cr	male	50	112	0.2934	3.23e-4	Poiley, 1972
+Sprague-Dawley	female	NA	21	0.044	NA	NAS, 1978
+Sprague-Dawley	female	NA	28	0.064	NA	NAS, 1978
+Sprague-Dawley	female	NA	35	0.1	NA	NAS, 1978
+Sprague-Dawley	female	NA	56	0.185	NA	NAS, 1978
+Sprague-Dawley	female	NA	70	0.21	NA	NAS, 1978
+Sprague-Dawley	female	NA	84	0.23	NA	NAS, 1978
+Sprague-Dawley	female	21	21	0.055	NA	Pond et al, 1985
+Sprague-Dawley	female	21	49	0.175	NA	Pond et al, 1985
+Sprague-Dawley	female	21	77	0.225	NA	Pond et al, 1985
+Sprague-Dawley	female	21	105	0.25	NA	Pond et al, 1985
+Sprague-Dawley	female	21	126	0.275	NA	Pond et al, 1985
+Sprague-Dawley	female	21	147	0.29	NA	Pond et al, 1985
+Sprague-Dawley	male	NA	21	0.046	NA	NAS, 1978
+Sprague-Dawley	male	NA	28	0.075	NA	NAS, 1978
+Sprague-Dawley	male	NA	35	0.12	NA	NAS, 1978
+Sprague-Dawley	male	NA	56	0.236	NA	NAS, 1978
+Sprague-Dawley	male	NA	70	0.302	NA	NAS, 1978
+Sprague-Dawley	male	NA	84	0.365	NA	NAS, 1978
+Sprague-Dawley	male	21	21	0.055	NA	Pond et al, 1985
+Sprague-Dawley	male	21	49	0.216	NA	Pond et al, 1985
+Sprague-Dawley	male	21	77	0.31	NA	Pond et al, 1985
+Sprague-Dawley	male	21	105	0.4	NA	Pond et al, 1985
+Sprague-Dawley	male	21	126	0.425	NA	Pond et al, 1985
+Sprague-Dawley	male	21	147	0.46	NA	Pond et al, 1985
+Sprague-Dawley/MCr	female	26	1	0.0063	3.03e-7	Poiley, 1972
+Sprague-Dawley/MCr	female	27	7	0.0164	7.56e-6	Poiley, 1972
+Sprague-Dawley/MCr	female	22	14	0.052	4.73e-6	Poiley, 1972
+Sprague-Dawley/MCr	female	25	21	0.0556	1.56e-6	Poiley, 1972
+Sprague-Dawley/MCr	female	20	28	0.0953	6.81e-5	Poiley, 1972
+Sprague-Dawley/MCr	female	24	42	0.1553	2.26e-5	Poiley, 1972
+Sprague-Dawley/MCr	female	28	56	0.1901	8.28e-5	Poiley, 1972
+Sprague-Dawley/MCr	female	28	70	0.2367	2.57e-4	Poiley, 1972
+Sprague-Dawley/MCr	female	20	84	0.2446	7.06e-5	Poiley, 1972
+Sprague-Dawley/MCr	female	20	112	0.259	5.29e-5	Poiley, 1972
+Sprague-Dawley/MCr	female	20	140	0.2803	9.7e-5	Poiley, 1972
+Sprague-Dawley/MCr	female	20	168	0.2868	7.7e-5	Poiley, 1972
+Sprague-Dawley/MCr	female	20	196	0.2895	3.66e-5	Poiley, 1972
+Sprague-Dawley/MCr	male	20	1	0.0067	2.5e-7	Poiley, 1972
+Sprague-Dawley/MCr	male	21	7	0.018	3.52e-6	Poiley, 1972
+Sprague-Dawley/MCr	male	28	14	0.053	1e-6	Poiley, 1972
+Sprague-Dawley/MCr	male	26	21	0.057	1.89e-6	Poiley, 1972
+Sprague-Dawley/MCr	male	23	28	0.0985	7.92e-5	Poiley, 1972
+Sprague-Dawley/MCr	male	26	42	0.1668	3.2e-4	Poiley, 1972
+Sprague-Dawley/MCr	male	22	56	0.2326	2.64e-4	Poiley, 1972
+Sprague-Dawley/MCr	male	24	70	0.2965	2.44e-4	Poiley, 1972
+Sprague-Dawley/MCr	male	22	84	0.3686	3.6e-4	Poiley, 1972
+Sprague-Dawley/MCr	male	20	112	0.3849	4.7e-4	Poiley, 1972
+Sprague-Dawley/MCr	male	20	140	0.4403	3.19e-4	Poiley, 1972
+Sprague-Dawley/MCr	male	20	168	0.4511	1.11e-4	Poiley, 1972
+Sprague-Dawley/MCr	male	20	196	0.5157	1.25e-4	Poiley, 1972
+Sprague-Dawley Spartan	female	80	46	0.2	NA	Pond et al, 1985
+Sprague-Dawley Spartan	female	80	76	0.265	NA	Pond et al, 1985
+Sprague-Dawley Spartan	female	80	106	0.285	NA	Pond et al, 1985
+Sprague-Dawley Spartan	female	80	136	0.31	NA	Pond et al, 1985
+Sprague-Dawley Spartan	female	80	226	0.325	NA	Pond et al, 1985
+Sprague-Dawley Spartan	female	80	316	0.35	NA	Pond et al, 1985
+Sprague-Dawley Spartan	female	80	406	0.35	NA	Pond et al, 1985
+Sprague-Dawley Spartan	female	80	586	0.385	NA	Pond et al, 1985
+Sprague-Dawley Spartan	female	80	766	0.445	NA	Pond et al, 1985
+Sprague-Dawley Spartan	female	80	766	0.445	NA	Pond et al, 1985
+Sprague-Dawley Spartan	female	80	766	0.445	NA	Pond et al, 1985
+Sprague-Dawley Spartan	male	80	106	0.45	NA	Pond et al, 1985
+Sprague-Dawley Spartan	male	80	136	0.475	NA	Pond et al, 1985
+Sprague-Dawley Spartan	male	80	226	0.535	NA	Pond et al, 1985
+Sprague-Dawley Spartan	male	80	316	0.58	NA	Pond et al, 1985
+Sprague-Dawley Spartan	male	80	406	0.6	NA	Pond et al, 1985
+Sprague-Dawley Spartan	male	80	586	0.615	NA	Pond et al, 1985
+Sprague-Dawley Spartan	male	80	766	0.565	NA	Pond et al, 1985
+Sprague-Dawley Spartan	male	80	46	0.25	NA	Quast et al., 1983
+Sprague-Dawley Spartan	male	80	46	0.25	NA	Quast et al., 1983
+Sprague-Dawley Spartan	male	80	76	0.4	NA	Quast et al., 1983
+Sprague-Dawley 1951	female	103	1	0.0055	4.56e-7	Poiley, 1972
+Sprague-Dawley 1951	female	100	7	0.0126	1.44e-6	Poiley, 1972
+Sprague-Dawley 1951	female	91	14	0.0225	1.46e-5	Poiley, 1972
+Sprague-Dawley 1951	female	79	21	0.0351	2.03e-5	Poiley, 1972
+Sprague-Dawley 1951	female	100	28	0.0481	4.56e-5	Poiley, 1972
+Sprague-Dawley 1951	female	100	42	0.0925	6.01e-5	Poiley, 1972
+Sprague-Dawley 1951	female	91	56	0.1152	1.72e-4	Poiley, 1972
+Sprague-Dawley 1951	female	45	70	0.1622	1.76e-4	Poiley, 1972
+Sprague-Dawley 1951	female	69	84	0.1764	3.06e-4	Poiley, 1972
+Sprague-Dawley 1951	female	40	112	0.1985	3.91e-5	Poiley, 1972
+Sprague-Dawley 1951	female	35	140	0.2161	3.02e-5	Poiley, 1972
+Sprague-Dawley 1951	female	53	168	0.23	9.03e-5	Poiley, 1972
+Sprague-Dawley 1951	male	100	1	0.006	8.56e-7	Poiley, 1972
+Sprague-Dawley 1951	male	95	7	0.013	1.89e-6	Poiley, 1972
+Sprague-Dawley 1951	male	83	14	0.0246	1.7e-5	Poiley, 1972
+Sprague-Dawley 1951	male	95	21	0.0374	7.56e-6	Poiley, 1972
+Sprague-Dawley 1951	male	100	28	0.0498	4.06e-5	Poiley, 1972
+Sprague-Dawley 1951	male	100	42	0.0976	6.68e-5	Poiley, 1972
+Sprague-Dawley 1951	male	87	56	0.1528	2.03e-4	Poiley, 1972
+Sprague-Dawley 1951	male	66	70	0.2054	5.52e-4	Poiley, 1972
+Sprague-Dawley 1951	male	58	84	0.2399	4.33e-4	Poiley, 1972
+Sprague-Dawley 1951	male	40	112	0.2875	9.75e-5	Poiley, 1972
+Sprague-Dawley 1951	male	33	140	0.3182	7.88e-5	Poiley, 1972
+Sprague-Dawley 1951	male	41	168	0.3236	3.13e-4	Poiley, 1972
+S5B/P1Cr	female	29	1	0.0059	7.66e-7	Poiley, 1972
+S5B/P1Cr	female	21	7	0.0139	5.06e-6	Poiley, 1972
+S5B/P1Cr	female	36	14	0.0247	1.5e-5	Poiley, 1972
+S5B/P1Cr	female	46	21	0.0368	2.02e-5	Poiley, 1972
+S5B/P1Cr	female	54	28	0.0552	2.63e-5	Poiley, 1972
+S5B/P1Cr	female	49	42	0.0954	1.24e-4	Poiley, 1972
+S5B/P1Cr	female	64	56	0.125	5.44e-5	Poiley, 1972
+S5B/P1Cr	female	27	70	0.1449	4.9e-5	Poiley, 1972
+S5B/P1Cr	female	27	84	0.1673	1.08e-4	Poiley, 1972
+S5B/P1Cr	female	28	112	0.2057	2.29e-4	Poiley, 1972
+S5B/P1Cr	female	32	140	0.2298	2.25e-4	Poiley, 1972
+S5B/P1Cr	female	30	168	0.244	3.66e-4	Poiley, 1972
+S5B/P1Cr	male	24	1	0.0061	5.63e-7	Poiley, 1972
+S5B/P1Cr	male	16	7	0.0161	3.06e-6	Poiley, 1972
+S5B/P1Cr	male	26	14	0.025	1.5e-5	Poiley, 1972
+S5B/P1Cr	male	27	21	0.0387	2.5e-5	Poiley, 1972
+S5B/P1Cr	male	47	28	0.0601	7.23e-5	Poiley, 1972
+S5B/P1Cr	male	44	42	0.1224	2.85e-4	Poiley, 1972
+S5B/P1Cr	male	58	56	0.1897	2.98e-4	Poiley, 1972
+S5B/P1Cr	male	21	70	0.2413	2.56e-4	Poiley, 1972
+S5B/P1Cr	male	23	84	0.2856	3.02e-4	Poiley, 1972
+S5B/P1Cr	male	29	112	0.3194	4.05e-4	Poiley, 1972
+S5B/P1Cr	male	27	140	0.3583	6.19e-4	Poiley, 1972
+S5B/P1Cr	male	25	168	0.3662	5.94e-4	Poiley, 1972
+Wcrypt/Ztm	female	12	100	0.115	1.44e-4	Alt et al., 1985
+Wcrypt/Ztm	male	36	100	0.286	6.25e-4	Alt et al., 1985
+Wistar/Furth Cr	female	29	1	0.0071	1.6e-7	Poiley, 1972
+Wistar/Furth Cr	female	28	7	0.0164	3.8e-6	Poiley, 1972
+Wistar/Furth Cr	female	20	14	0.0226	7.56e-6	Poiley, 1972
+Wistar/Furth Cr	female	22	21	0.0391	3.06e-6	Poiley, 1972
+Wistar/Furth Cr	female	25	28	0.0615	1.5e-5	Poiley, 1972
+Wistar/Furth Cr	female	19	42	0.0759	5.33e-5	Poiley, 1972
+Wistar/Furth Cr	female	24	56	0.1366	6.38e-6	Poiley, 1972
+Wistar/Furth Cr	female	27	70	0.1431	1.23e-5	Poiley, 1972
+Wistar/Furth Cr	female	23	84	0.1755	7.97e-5	Poiley, 1972
+Wistar/Furth Cr	female	19	112	0.2019	0.246	Poiley, 1972
+Wistar/Furth Cr	female	19	140	0.2249	1.03e-4	Poiley, 1972
+Wistar/Furth Cr	female	24	168	0.2627	3.73e-4	Poiley, 1972
+Wistar/Furth Cr	male	21	1	0.0072	1.81e-7	Poiley, 1972
+Wistar/Furth Cr	male	27	7	0.0174	2.48e-6	Poiley, 1972
+Wistar/Furth Cr	male	25	14	0.0242	5.18e-6	Poiley, 1972
+Wistar/Furth Cr	male	21	21	0.04	1.21e-6	Poiley, 1972
+Wistar/Furth Cr	male	28	28	0.0651	9.77e-6	Poiley, 1972
+Wistar/Furth Cr	male	20	42	0.0912	5.13e-4	Poiley, 1972
+Wistar/Furth Cr	male	22	56	0.1566	6.16e-5	Poiley, 1972
+Wistar/Furth Cr	male	26	70	0.1851	1.21e-5	Poiley, 1972
+Wistar/Furth Cr	male	10	84	0.2403	3.43e-4	Poiley, 1972
+Wistar/Furth Cr	male	22	112	0.2777	7.55e-4	Poiley, 1972
+Wistar/Furth Cr	male	17	140	0.3194	8.31e-4	Poiley, 1972
+Wistar/Furth Cr	male	21	168	0.3596	5.39e-4	Poiley, 1972
+Wistar/Lewis Cr	female	27	1	0.0051	7.66e-7	Poiley, 1972
+Wistar/Lewis Cr	female	33	7	0.0181	1.89e-6	Poiley, 1972
+Wistar/Lewis Cr	female	24	14	0.0256	4e-6	Poiley, 1972
+Wistar/Lewis Cr	female	36	21	0.0524	2.5e-5	Poiley, 1972
+Wistar/Lewis Cr	female	57	28	0.0849	2.29e-4	Poiley, 1972
+Wistar/Lewis Cr	female	38	42	0.1418	6.44e-4	Poiley, 1972
+Wistar/Lewis Cr	female	35	56	0.2425	1.16e-4	Poiley, 1972
+Wistar/Lewis Cr	female	42	70	0.2612	3.15e-4	Poiley, 1972
+Wistar/Lewis Cr	female	39	84	0.3024	3.06e-4	Poiley, 1972
+Wistar/Lewis Cr	female	41	112	0.327	2.85e-4	Poiley, 1972
+Wistar/Lewis Cr	female	45	140	0.3357	2.64e-4	Poiley, 1972
+Wistar/Lewis Cr	female	42	168	0.3499	1.93e-4	Poiley, 1972
+Wistar/Lewis Cr	male	27	1	0.0052	7.66e-7	Poiley, 1972
+Wistar/Lewis Cr	male	32	7	0.0197	7.56e-6	Poiley, 1972
+Wistar/Lewis Cr	male	29	14	0.0272	4.52e-6	Poiley, 1972
+Wistar/Lewis Cr	male	32	21	0.0533	3.45e-5	Poiley, 1972
+Wistar/Lewis Cr	male	59	28	0.0961	1.03e-4	Poiley, 1972
+Wistar/Lewis Cr	male	38	42	0.1814	7.84e-4	Poiley, 1972
+Wistar/Lewis Cr	male	44	56	0.2697	5.18e-4	Poiley, 1972
+Wistar/Lewis Cr	male	33	70	0.3165	5.64e-4	Poiley, 1972
+Wistar/Lewis Cr	male	30	84	0.3817	4e-4	Poiley, 1972
+Wistar/Lewis Cr	male	28	112	0.4182	4.46e-4	Poiley, 1972
+Wistar/Lewis Cr	male	29	140	0.4591	7.84e-4	Poiley, 1972
+Wistar/Lewis Cr	male	34	168	0.5264	4.52e-4	Poiley, 1972
+Wistar	female	33	50	0.168	2.5e-5	NAS, 1971
+Wistar	female	42	100	0.229	2.5e-5	NAS, 1971
+Wistar	female	52	300	0.299	1.6e-5	NAS, 1971
+Wistar	female	100	28	0.0975	1.41e-5	Wiberg et al., 1966
+Wistar	female	100	56	0.1475	1.41e-5	Wiberg et al., 1966
+Wistar	female	100	84	0.17	2.5e-5	Wiberg et al., 1966
+Wistar	female	100	112	0.18	5.62e-5	Wiberg et al., 1966
+Wistar	female	100	112	0.18	5.62e-5	Wiberg et al., 1966
+Wistar	male	25	60	0.15	NA	Deyl et al, 1975
+Wistar	male	25	90	0.295	NA	Deyl et al, 1975
+Wistar	male	25	120	0.35	NA	Deyl et al, 1975
+Wistar	male	25	150	0.395	NA	Deyl et al, 1975
+Wistar	male	25	210	0.415	NA	Deyl et al, 1975
+Wistar	male	25	270	0.45	NA	Deyl et al, 1975
+Wistar	male	25	330	0.48	NA	Deyl et al, 1975
+Wistar	male	25	390	0.49	NA	Deyl et al, 1975
+Wistar	male	25	450	0.5	NA	Deyl et al, 1975
+Wistar	male	25	510	0.52	NA	Deyl et al, 1975
+Wistar	male	25	570	0.55	NA	Deyl et al, 1975
+Wistar	male	25	630	0.565	NA	Deyl et al, 1975
+Wistar	male	25	690	0.595	NA	Deyl et al, 1975
+Wistar	male	25	720	0.6	NA	Deyl et al, 1975
+Wistar	male	25	750	0.48	NA	Deyl et al, 1975
+Wistar	male	25	780	0.53	NA	Deyl et al, 1975
+Wistar	male	25	840	0.47	NA	Deyl et al, 1975
+Wistar	male	25	900	0.57	NA	Deyl et al, 1975
+Wistar	male	25	930	0.55	NA	Deyl et al, 1975
+Wistar	male	10	35	0.0523	1.69e-6	Leong et al., 1964
+Wistar	male	10	49	0.1098	2.6e-5	Leong et al., 1964
+Wistar	male	10	70	0.2113	4.49e-5	Leong et al., 1964
+Wistar	male	10	126	0.2985	5.78e-5	Leong et al., 1964
+Wistar	male	34	50	0.218	2.5e-5	NAS, 1971
+Wistar	male	38	100	0.367	2.5e-5	NAS, 1971
+Wistar	male	NA	300	0.485	1.6e-5	NAS, 1971
+Wistar	male	100	84	0.27	6.25e-6	Wiberg et al., 1966
+Wistar	male	100	112	0.295	5.62e-5	Wiberg et al., 1966
+Wistar	male	100	28	0.125	6.25e-6	Wiberg et al., 1966
+Wistar	male	100	56	0.225	5.62e-5	Wiberg et al., 1966
+Yoshida/Cr	female	35	1	0.006	4.23e-7	Poiley, 1972
+Yoshida/Cr	female	35	7	0.0113	1.56e-6	Poiley, 1972
+Yoshida/Cr	female	31	14	0.034	1.37e-5	Poiley, 1972
+Yoshida/Cr	female	24	21	0.0515	3.19e-5	Poiley, 1972
+Yoshida/Cr	female	21	28	0.064	2.65e-5	Poiley, 1972
+Yoshida/Cr	female	28	42	0.1348	5.55e-5	Poiley, 1972
+Yoshida/Cr	female	26	56	0.1898	1.48e-4	Poiley, 1972
+Yoshida/Cr	female	24	70	0.2585	1.51e-4	Poiley, 1972
+Yoshida/Cr	female	25	84	0.272	2.57e-4	Poiley, 1972
+Yoshida/Cr	female	21	112	0.3032	4.17e-4	Poiley, 1972
+Yoshida/Cr	female	23	140	0.3106	4.14e-4	Poiley, 1972
+Yoshida/Cr	male	20	1	0.0061	3.91e-7	Poiley, 1972
+Yoshida/Cr	male	21	7	0.0124	1.5e-6	Poiley, 1972
+Yoshida/Cr	male	22	14	0.0374	1.21e-5	Poiley, 1972
+Yoshida/Cr	male	24	21	0.0587	2.02e-5	Poiley, 1972
+Yoshida/Cr	male	21	28	0.0799	6.16e-5	Poiley, 1972
+Yoshida/Cr	male	22	42	0.1592	9.95e-5	Poiley, 1972
+Yoshida/Cr	male	23	56	0.2557	3.42e-4	Poiley, 1972
+Yoshida/Cr	male	24	70	0.3207	4.09e-4	Poiley, 1972
+Yoshida/Cr	male	25	84	0.3413	5.51e-4	Poiley, 1972
+Yoshida/Cr	male	26	112	0.4019	4.82e-4	Poiley, 1972
+Yoshida/Cr	male	22	140	0.4726	0.00123	Poiley, 1972
