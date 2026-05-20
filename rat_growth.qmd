@@ -1,0 +1,146 @@
+---
+title: "Modeling Rat Growth"
+author: "Gilberto Padilla Mercado"
+format: html
+---
+
+```{r}
+library(dplyr)
+library(ggplot2)
+source("fitting.R")
+rat_df <- readr::read_tsv("ratBW_data1.tsv")
+```
+
+# Data Cleanup
+
+For these models, we want to ensure that all data is essentially summary data,
+with N > 1 and a variance associated. When variance is not included but N > 1,
+it will be set to the median variance.
+
+```{r}
+maxCV <- sqrt(rat_df$Variance)
+maxCV <- maxCV/rat_df$Weight
+maxCV <- median(maxCV, na.rm= TRUE)
+rat_df <- rat_df |> 
+  filter(!is.na(N), !Sex %in% "both", N > 1) |> 
+  mutate(Variance = ifelse(is.na(Variance),
+                           (maxVarCV * Weight)^2,
+                           Variance),
+         Studies = as.factor(paste(Species, Reference, Sex, sep = "_")))
+
+ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) + 
+  geom_point(shape = 21) +
+  geom_line(aes(group = Studies)) +
+  scale_color_manual(values = c("black", "green4")) +
+  theme_bw() + 
+  theme(legend.position = "bottom")
+```
+
+# Nonlinear Regression Model
+
+# Growth Models
+
+We can model the growth using a nonlinear mixed effects model. Three types of models:  
+
+Gompertz:  $W(t) = A \cdot \exp(- \exp(-k \cdot (t-t_0))$  
+Logistic:  $W(t) = \frac{A}{1+\cdot \exp(-k \cdot (t-t_0))}$  
+
+
+For all of these the parameter as as follows:  
+
+-  `A` is the mature body weight.  
+-  `t_0` is the time at inflection point.
+-  `k` is the rate of growth.  
+
+
+## Logistic
+
+
+```{r}
+logistic_mod <- list(
+  name = "logistic",
+  starts = function(x, y) {
+    N <- length(unique(x[x < 300]))
+    if (N %% 2 == 1) { # ODD
+      ix <- 1+(N%/%2)
+      ix1 <- ix - 1
+      ix2 <- ix + 1
+      ek <- mean(c(
+        (y[ix]-y[ix1])/(x[ix]-x[ix1]),
+        (y[ix2]-y[ix])/(x[ix2]-x[ix])
+      ))
+    } else { # EVEN
+      ix <- 1+(N%/%2) - 1
+      ix2 <- ix+1
+      ek <- (y[ix2]-y[ix])/(x[ix2]-x[ix])
+    }
+    c(
+      A = 0.4,
+      k = (signif(ek, 3)*4),
+      tmid = round(median(x[x < 300]))
+    )
+  },
+  lower_lim = c(A = 0.01, k = 0.0001, tmid = 0),
+  upper_lim = c(A = 1, k = 1, tmid = 300),
+  predict = function(input, A, k, tmid) {
+    value <- A / (1 + (exp(-k * (input - tmid))))
+    return(value)
+  }
+)
+
+```
+
+## Gompertz
+
+```{r}
+gompertz_mod <- list(
+  name = "Gompertz",
+  starts = function(x, y) {
+    N <- length(unique(x[x < 300]))
+    if (N %% 2 == 1) { # ODD
+      ix <- 1+(N%/%2)
+      ix1 <- ix - 1
+      ix2 <- ix + 1
+      ek <- mean(c(
+        (y[ix]-y[ix1])/(x[ix]-x[ix1]),
+        (y[ix2]-y[ix])/(x[ix2]-x[ix])
+      ))
+    } else { # EVEN
+      ix <- 1+(N%/%2) - 1
+      ix2 <- ix+1
+      ek <- (y[ix2]-y[ix])/(x[ix2]-x[ix])
+    }
+    c(
+      A = 0.4,
+      k = (signif(ek, 3)*4),
+      tmid = round(median(x[x < 300]))
+    )
+  },
+  lower_lim = c(A = 0.01, k = 0.0001, tmid = 0),
+  upper_lim = c(A = 1, k = 1, tmid = 300),
+  predict = function(input, A, k, tmid) {
+    value <- A * exp(-exp(-k * (input - tmid)))
+    return(value)
+  }
+)
+```
+
+
+
+```{r}
+all_fits <- fit_all_groups(rat_df,
+                           grp_fct = "Sex", err_fct = c("Species", "Reference"),
+                           mfun = list(logistic_mod, gompertz_mod))
+
+ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) + 
+  geom_point(shape = 21) +
+  scale_color_manual(values = c("black", "green4")) +
+  geom_line(aes(y = logistic_mod$predict(Age, A=0.235, k=0.04377, tmid=50.29)),
+            color = "black") +
+  geom_line(aes(y = logistic_mod$predict(Age, A=0.3809, k=0.0441, tmid=59.9)),
+            color = "green4") +
+  theme_bw() + 
+  theme(legend.position = "bottom")
+```
+
+
