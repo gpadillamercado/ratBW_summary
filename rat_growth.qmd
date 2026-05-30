@@ -5,8 +5,9 @@ format: html
 ---
 
 ```{r}
-library(dplyr)
+
 library(ggplot2)
+library(tictoc)
 source("fitting.R")
 rat_df <- readr::read_tsv("ratBW_data1.tsv")
 ```
@@ -21,12 +22,16 @@ it will be set to the median variance.
 maxCV <- sqrt(rat_df$Variance)
 maxCV <- maxCV/rat_df$Weight
 maxCV <- median(maxCV, na.rm= TRUE)
-rat_df <- rat_df |> 
-  filter(!is.na(N), !Sex %in% "both", N > 1) |> 
-  mutate(Variance = ifelse(is.na(Variance),
-                           (maxVarCV * Weight)^2,
-                           Variance),
-         Studies = as.factor(paste(Species, Reference, Sex, sep = "_")))
+rat_df <- subset(rat_df, 
+                 !is.na(N) & !(Sex %in% "both") & N > 1)
+rat_df$Studies <- with(
+  rat_df, factor(paste(Species, Reference, Sex, sep = "_"))
+)
+
+rat_df$Variance <- with(
+  rat_df,
+  ifelse(is.na(Variance), (maxCV * Weight)^2, Variance)
+)
 
 ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) + 
   geom_point(shape = 21) +
@@ -60,34 +65,41 @@ For all of these the parameter as as follows:
 logistic_mod <- list(
   name = "logistic",
   starts = function(x, y) {
-    N <- length(unique(x[x < 300]))
-    if (N %% 2 == 1) { # ODD
-      ix <- 1+(N%/%2)
-      ix1 <- ix - 1
-      ix2 <- ix + 1
-      ek <- mean(c(
-        (y[ix]-y[ix1])/(x[ix]-x[ix1]),
-        (y[ix2]-y[ix])/(x[ix2]-x[ix])
-      ))
-    } else { # EVEN
-      ix <- 1+(N%/%2) - 1
-      ix2 <- ix+1
-      ek <- (y[ix2]-y[ix])/(x[ix2]-x[ix])
-    }
-    c(
-      A = 0.4,
-      k = (signif(ek, 3)*4),
-      tmid = round(median(x[x < 300]))
+    # tmid has to be the point at which Y = A/2
+    # so find closest Y in data to this value based on start.
+    A <- 0.4
+    tmid <- x[which.min(abs(y - (A/2)))]
+    tq <- x[which.min(abs(y - (A/4)))]
+    k <- log(4 - 1)/(tmid - tq)
+    list(
+      A = A,
+      k = signif(max(1E-4, k), 4),
+      tmid = round(tmid)
     )
   },
-  lower_lim = c(A = 0.01, k = 0.0001, tmid = 0),
-  upper_lim = c(A = 1, k = 1, tmid = 300),
-  predict = function(input, A, k, tmid) {
-    value <- A / (1 + (exp(-k * (input - tmid))))
+  lower_lim = list(A = 0.01, k = 1E-5, tmid = 2),
+  upper_lim = list(A = 1, k = 1, tmid = 300),
+  predict = function(Age, A, k, tmid) {
+    value <- A / (1 + (exp(-k * (Age - tmid))))
     return(value)
   }
 )
 
+all_fits <- fit_data(rat_df, 
+                     data_fct = "Sex", sigma_fct = "Sex",
+                     mod_fun = logistic_mod)
+
+ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) + 
+  geom_point(shape = 21, alpha = 0.4) +
+  geom_function(fun = \(x) do.call(logistic_mod$predict,
+                                   c(list(Age = x), get_coefs(all_fits$male))),
+                color = "green4", linewidth = 1, alpha = 0.8) +
+  geom_function(fun = \(x) do.call(logistic_mod$predict,
+                                   c(list(Age = x), get_coefs(all_fits$female))),
+                color = "black", linewidth = 1, alpha = 0.8) +
+  scale_color_manual(values = c("black", "green4")) +
+  theme_bw() + 
+  theme(legend.position = "bottom")
 ```
 
 ## Gompertz
@@ -128,9 +140,10 @@ gompertz_mod <- list(
 
 
 ```{r}
-all_fits <- fit_all_groups(rat_df,
-                           grp_fct = "Sex", err_fct = c("Species", "Reference"),
-                           mfun = list(logistic_mod, gompertz_mod))
+
+
+all_fits <- fit_data(rat_df, data_fct = "Sex", sigma_fct = "Species",
+                     mod_fun = logistic_mod)
 
 ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) + 
   geom_point(shape = 21) +

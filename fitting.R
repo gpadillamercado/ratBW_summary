@@ -1,118 +1,92 @@
 # Optimization functions
 library(optimx)
+# 1. Split the data that will have different model parameters
+# 2. Make a factor variable for any sigma_splits (same model parameters, different sigmas)
+# 2a. Save the levels of the sigma_splits and make a list of starts, lower, and upper.
+# 3. Fit each split by main data_group, but for each of these:
+# 3a. Predict a set of parameters for the whole data group.
+# 3b. Split by sigma_split and set the respective sigma.
+# 3c. Unsplit the data and estimate the log-likelihood.
 
-pregroup <- function(df) {
-  df |>
-    group_by(Species, Sex, Age) |>
-    summarize(
-      Weight = sum(Weight * N) / sum(N),
-      Variance = poolvar(Variance, N, "pool"),
-      N = sum(N),
-      .groups = "drop"
-    )
-}
 
-llhood <- function(obs, preds, pooled_variance) {
-  sum(dnorm(obs, preds, sd = sqrt(pooled_variance), log = TRUE))
-}
-
-poolvar <- function(x, N, fct = NULL) {
-  fct <- fct %||% factor(seq_along(x))
-  pooled <- "pool" %in% fct && length(fct) == 1L
-  if (pooled) {
-    fct <- factor(rep(1, length(x)))
-  }
-  stopifnot({
-    length(x) == length(N)
-    length(x) == length(fct)
-  })
-  spx <- split(x, f = fct)
-  spN <- split(N, f = fct)
-  out <- numeric(length(levels(fct)))
+fit_data <- function(dat, data_fct, sigma_fct, mod_fun) {
+  # Split the data for each data_fct
+  stopifnot(!is.null(dat[[data_fct]]))
+  stopifnot(!is.null(dat[[sigma_fct]]))
+  stopifnot(all(c("Weight", "Age") %in% names(dat)))
+  big_split <- factor(dat[[data_fct]])
+  big_lvls <- levels(big_split)
+  dat_split <- split(dat, big_split)
+  grp_fit <- list()
   it <- 1L
-  for (lvl in levels(fct)) {
-    dent <- sum(spN[[lvl]] - 1)
-    numt <- sum((spN[[lvl]] - 1) * spx[[lvl]])
-    out[it] <- numt / dent
+  for (this in big_lvls) {
+    this_group <- dat_split[[this]]
+    # Make a sigma_fct group column for this
+    this_group[["sigma_grp"]] <- factor(paste0("sigma_", this_group[[sigma_fct]]))
+    grp_sigmas <- levels(this_group$sigma_grp)
+    this_sigmas <- list(
+      starts = as.list(setNames(rep(1E-2, length(grp_sigmas)), grp_sigmas)),
+      lower = as.list(setNames(rep(1E-5, length(grp_sigmas)), grp_sigmas)),
+      upper = as.list(setNames(rep(1, length(grp_sigmas)), grp_sigmas))
+    )
+    grp_fit[[it]] <- fit_group(this_group, this_sigmas, mod_fun)
     it <- it + 1L
   }
-  if (pooled) {
-    unique(out)
-  } else {
-    out[as.integer(fct)]
-  }
+  grp_fit <- setNames(grp_fit, big_lvls)
+  return(grp_fit)
 }
 
-llobjective <- function(pars, input, obs, sigma, mfun) {
-  preds <- do.call(mfun, c(list(input), as.list(pars)))
-  ll <- llhood(obs, preds, sigma)
-  -1 * ll # bobyqa minimizes values
+# Define negative log-likelihood function here
+llobjective <- function(par, dat, mod_fun) {
+  # Which parameters are sigmas? With values.
+  sigma_pars <- par[grepl("sigma", names(par))]
+  model_pars <- par[!grepl("sigma", names(par))]
+  preds <- do.call(mod_fun, c(list(Age = dat$Age), as.list(model_pars)))
+  obs <- dat$Weight
+  res <- obs - preds
+
+  # Set sigma based on the sigma_grp column
+  sigma <- unname(unlist(sigma_pars[dat$sigma_grp]))
+  nll <- -1 * sum(dnorm(res, 0, sd = sqrt(sigma), log = TRUE))
+  return(nll)
 }
 
-opt_fit <- function(df, fct = NULL, mfun = logistic_mod) {
-  if (is.null(fct)) {
-    fct <- factor(seq_len(NROW(df)))
-  } else {
-    fct <- factor(df[[fct]])
-  }
-  this_fun <- mfun
-  this_fun_name <- this_fun[["name"]]
-  x <- df[["Age"]]
-  y <- df[["Weight"]]
-  yvar <- df[["Variance"]]
-  nvar <- df[["N"]]
-  pooledVar <- poolvar(yvar, nvar, fct)
-  this_starts <- this_fun[["starts"]](x, y)
-  print(this_starts)
-  this_lower <- this_fun[["lower_lim"]]
-  this_upper <- this_fun[["upper_lim"]]
-  this_fit <- optimx(
-    par = this_starts,
-    fn = llobjective,
-    lower = this_lower,
-    upper = this_upper,
-    method = "bobyqa",
-    input = x, obs = y, sigma = pooledVar, mfun = this_fun[["predict"]]
-  ) |> suppressWarnings()
-  fit_out <- cbind(
-    data.frame(model = this_fun_name, optimizer = rownames(this_fit)),
-    as.data.frame(this_fit)
+fit_group <- function(dat, fct_lst = NULL, mfun = logistic_mod) {
+  stopifnot(c("sigma_grp", "Weight", "Age") %in% names(dat))
+  # Combine parameter starts & bounds with sigma starts & bounds
+  this_start <- c(
+    mfun$starts(dat$Age, dat$Weight),
+    fct_lst$starts
   )
-  rownames(fit_out) <- NULL
-  return(fit_out)
+  this_lower <- c(
+    mfun$lower_lim,
+    fct_lst$lower
+  )
+  this_upper <- c(
+    mfun$upper_lim,
+    fct_lst$upper
+  )
+
+  fit <- try(
+    optimx::opm(
+      unlist(this_start),
+      llobjective,
+      lower = unlist(this_lower),
+      upper = unlist(this_upper),
+      method = "bobyqa",
+      hessian = FALSE,
+      dat = dat,
+      mod_fun = mfun$predict
+    ) |> as.data.frame()
+  )
+  if (inherits(fit, "try-error")) {
+    return(NULL)
+  }
+  fit$method <- "bobyqa"
+  rownames(fit) <- NULL
+  return(fit)
 }
 
-fit_all_groups <- function(df, grp_fct = "Sex", err_fct = NULL, mfun = list(logistic_mod)) {
-  stopifnot({
-    length(grp_fct) > 0
-    length(err_fct) > 0 || is.null(err_fct)
-  })
-  if (length(grp_fct) > 1) {
-    df$grp_fct <- factor(apply(sapply(grp_fct, \(x) df[[x]]), 1, paste0, collapse = " "))
-  } else {
-    df$grp_fct <- factor(df[[grp_fct]])
-  }
-  grp_fct <- paste0(grp_fct, collapse = "_")
-  if (length(err_fct) > 1) {
-    df$err_fct <- apply(sapply(err_fct, \(x) df[[x]]), 1, paste0, collapse = " ")
-  } else {
-    df$err_fct <- df[[err_fct]]
-  }
-  grp_split_df <- split(df, df$grp_fct)
-  grp_split_df <- lapply(
-    grp_split_df,
-    function(x) {
-      each_fun <- lapply(
-        mfun,
-        function(f) {
-          opt_fit(x, fct = "err_fct", mfun = f)
-        }
-      )
-      do.call(rbind, each_fun)
-    }
-  )
-  out <- do.call(rbind, grp_split_df)
-  out <- cbind(setNames(data.frame(rownames(out)), grp_fct), out)
-  rownames(out) <- NULL
-  return(out)
+get_coefs <- function(fit) {
+  as.list(fit[c("A", "k", "tmid")])
 }
