@@ -99,6 +99,7 @@ ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) +
                 color = "black", linewidth = 1, alpha = 0.8) +
   scale_color_manual(values = c("black", "green4")) +
   theme_bw() + 
+  labs(title = "Logistic Model Fits") +
   theme(legend.position = "bottom")
 ```
 
@@ -108,33 +109,43 @@ ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) +
 gompertz_mod <- list(
   name = "Gompertz",
   starts = function(x, y) {
-    N <- length(unique(x[x < 300]))
-    if (N %% 2 == 1) { # ODD
-      ix <- 1+(N%/%2)
-      ix1 <- ix - 1
-      ix2 <- ix + 1
-      ek <- mean(c(
-        (y[ix]-y[ix1])/(x[ix]-x[ix1]),
-        (y[ix2]-y[ix])/(x[ix2]-x[ix])
-      ))
-    } else { # EVEN
-      ix <- 1+(N%/%2) - 1
-      ix2 <- ix+1
-      ek <- (y[ix2]-y[ix])/(x[ix2]-x[ix])
-    }
-    c(
-      A = 0.4,
-      k = (signif(ek, 3)*4),
-      tmid = round(median(x[x < 300]))
+    # tmid is smaller than the logistic growth function
+    # so find closest Y in data to this value based on start.
+    A <- 0.4
+    tmid <- x[which.min(abs(y - (A/3)))]
+    tq <- x[which.min(abs(y - (A/4)))]
+    k <- log(3 - 1)/(tmid - tq)
+    list(
+      A = A,
+      k = signif(max(1E-4, k), 4),
+      tmid = round(tmid)
     )
   },
-  lower_lim = c(A = 0.01, k = 0.0001, tmid = 0),
-  upper_lim = c(A = 1, k = 1, tmid = 300),
-  predict = function(input, A, k, tmid) {
-    value <- A * exp(-exp(-k * (input - tmid)))
+  lower_lim = list(A = 0.01, k = 1E-5, tmid = 0),
+  upper_lim = list(A = 1, k = 1, tmid = 300),
+  predict = function(Age, A, k, tmid) {
+    value <- A * exp(-exp(-k * (Age - tmid)))
     return(value)
   }
 )
+
+all_fits2 <- fit_data(rat_df, 
+                     data_fct = "Sex", sigma_fct = "Sex",
+                     mod_fun = gompertz_mod)
+
+ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) + 
+  geom_point(shape = 21, alpha = 0.4) +
+  geom_function(fun = \(x) do.call(gompertz_mod$predict,
+                                   c(list(Age = x), get_coefs(all_fits2$male))),
+                color = "green4", linewidth = 1, alpha = 0.8) +
+  geom_function(fun = \(x) do.call(gompertz_mod$predict,
+                                   c(list(Age = x), get_coefs(all_fits2$female))),
+                color = "black", linewidth = 1, alpha = 0.8) +
+  scale_color_manual(values = c("black", "green4")) +
+  theme_bw() + 
+  labs(title = "Gompertz Model Fits") +
+  theme(legend.position = "bottom")
+
 ```
 
 
