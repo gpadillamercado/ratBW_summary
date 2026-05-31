@@ -36,23 +36,35 @@ fit_data <- function(dat, data_fct, sigma_fct, mod_fun) {
   return(grp_fit)
 }
 
+llnorm_summary <- function(res, N, svar, sigma) {
+  N * log(1 / (sigma * sqrt(2 * pi))) - ((N - 1) * svar + N * res^2) / (2 * sigma^2)
+}
+
 # Define negative log-likelihood function here
 llobjective <- function(par, dat, mod_fun) {
   # Which parameters are sigmas? With values.
   sigma_pars <- par[grepl("sigma", names(par))]
   model_pars <- par[!grepl("sigma", names(par))]
+  svar <- dat$Variance
+  sN <- dat$N
   preds <- do.call(mod_fun, c(list(Age = dat$Age), as.list(model_pars)))
   obs <- dat$Weight
   res <- obs - preds
 
   # Set sigma based on the sigma_grp column
   sigma <- unname(unlist(sigma_pars[dat$sigma_grp]))
-  nll <- -1 * sum(dnorm(res, 0, sd = sqrt(sigma), log = TRUE))
+  nll <- -1 * sum(llnorm_summary(res, sN, svar, sigma))
   return(nll)
 }
 
+pool_var <- function(vars, Ns) {
+  numerator <- sum((Ns - 1) * vars)
+  denom <- sum(Ns - 1)
+  return(numerator / denom)
+}
+
 fit_group <- function(dat, fct_lst = NULL, mfun = logistic_mod) {
-  stopifnot(c("sigma_grp", "Weight", "Age") %in% names(dat))
+  stopifnot(c("sigma_grp", "Weight", "Age", "N") %in% names(dat))
   # Combine parameter starts & bounds with sigma starts & bounds
   this_start <- c(
     mfun$starts(dat$Age, dat$Weight),
@@ -74,10 +86,11 @@ fit_group <- function(dat, fct_lst = NULL, mfun = logistic_mod) {
       lower = unlist(this_lower),
       upper = unlist(this_upper),
       method = "bobyqa",
-      hessian = FALSE,
+      hessian = TRUE,
       dat = dat,
       mod_fun = mfun$predict
-    ) |> as.data.frame()
+    ) |>
+      suppressWarnings()
   )
   if (inherits(fit, "try-error")) {
     return(NULL)
@@ -89,4 +102,11 @@ fit_group <- function(dat, fct_lst = NULL, mfun = logistic_mod) {
 
 get_coefs <- function(fit) {
   as.list(fit[c("A", "k", "tmid")])
+}
+
+get_ll <- function(fits) {
+  lapply(
+    fits,
+    function(x) -1 * x[["value"]]
+  )
 }
