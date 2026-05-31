@@ -19,29 +19,22 @@ with N > 1 and a variance associated. When variance is not included but N > 1,
 it will be set to the median variance.
 
 ```{r}
-maxCV <- sqrt(rat_df$Variance)
-maxCV <- maxCV/rat_df$Weight
-maxCV <- median(maxCV, na.rm= TRUE)
-rat_df <- subset(rat_df, 
-                 !is.na(N) & !(Sex %in% "both") & N > 1)
 rat_df$Studies <- with(
   rat_df, factor(paste(Species, Reference, Sex, sep = "_"))
 )
-
-rat_df$Variance <- with(
-  rat_df,
-  ifelse(is.na(Variance), (maxCV * Weight)^2, Variance)
-)
+rat_df <- subset(rat_df, !(Sex %in% "both") &  N > 1 & !is.na(Variance))
+rat_df <- subset(rat_df, Weight > Variance)
 
 ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) + 
-  geom_point(shape = 21) +
+  geom_pointrange(shape = 21, alpha = 0.4, size = 0.2,
+                  mapping = aes(ymin = pmax(0, Weight - sqrt(Variance)),
+                                ymax = Weight + sqrt(Variance))) +
   geom_line(aes(group = Studies)) +
   scale_color_manual(values = c("black", "green4")) +
   theme_bw() + 
   theme(legend.position = "bottom")
 ```
 
-# Nonlinear Regression Model
 
 # Growth Models
 
@@ -51,10 +44,10 @@ Gompertz:  $W(t) = A \cdot \exp(- \exp(-k \cdot (t-t_0))$
 Logistic:  $W(t) = \frac{A}{1+\cdot \exp(-k \cdot (t-t_0))}$  
 
 
-For all of these the parameter as as follows:  
+For all of these the parameters are as follows:  
 
 -  `A` is the mature body weight.  
--  `t_0` is the time at inflection point.
+-  `t_0` is the time at inflection point. In model function called `tmid`
 -  `k` is the rate of growth.  
 
 
@@ -77,30 +70,14 @@ logistic_mod <- list(
       tmid = round(tmid)
     )
   },
-  lower_lim = list(A = 0.01, k = 1E-5, tmid = 2),
-  upper_lim = list(A = 1, k = 1, tmid = 300),
+  lower_lim = list(A = 0.1, k = 1E-5, tmid = 10),
+  upper_lim = list(A = 1, k = 4, tmid = 300),
   predict = function(Age, A, k, tmid) {
     value <- A / (1 + (exp(-k * (Age - tmid))))
     return(value)
   }
 )
 
-all_fits <- fit_data(rat_df, 
-                     data_fct = "Sex", sigma_fct = "Sex",
-                     mod_fun = logistic_mod)
-
-ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) + 
-  geom_point(shape = 21, alpha = 0.4) +
-  geom_function(fun = \(x) do.call(logistic_mod$predict,
-                                   c(list(Age = x), get_coefs(all_fits$male))),
-                color = "green4", linewidth = 1, alpha = 0.8) +
-  geom_function(fun = \(x) do.call(logistic_mod$predict,
-                                   c(list(Age = x), get_coefs(all_fits$female))),
-                color = "black", linewidth = 1, alpha = 0.8) +
-  scale_color_manual(values = c("black", "green4")) +
-  theme_bw() + 
-  labs(title = "Logistic Model Fits") +
-  theme(legend.position = "bottom")
 ```
 
 ## Gompertz
@@ -112,58 +89,74 @@ gompertz_mod <- list(
     # tmid is smaller than the logistic growth function
     # so find closest Y in data to this value based on start.
     A <- 0.4
-    tmid <- x[which.min(abs(y - (A/3)))]
-    tq <- x[which.min(abs(y - (A/4)))]
-    k <- log(3 - 1)/(tmid - tq)
+    tmid <- x[which.min(y)] + 10
+    k <- log(9)/tmid
     list(
       A = A,
       k = signif(max(1E-4, k), 4),
       tmid = round(tmid)
     )
   },
-  lower_lim = list(A = 0.01, k = 1E-5, tmid = 0),
-  upper_lim = list(A = 1, k = 1, tmid = 300),
+  lower_lim = list(A = 0.1, k = 1E-5, tmid = 10),
+  upper_lim = list(A = 1, k = 4, tmid = 300),
   predict = function(Age, A, k, tmid) {
     value <- A * exp(-exp(-k * (Age - tmid)))
     return(value)
   }
 )
 
-all_fits2 <- fit_data(rat_df, 
-                     data_fct = "Sex", sigma_fct = "Sex",
-                     mod_fun = gompertz_mod)
-
-ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) + 
-  geom_point(shape = 21, alpha = 0.4) +
-  geom_function(fun = \(x) do.call(gompertz_mod$predict,
-                                   c(list(Age = x), get_coefs(all_fits2$male))),
-                color = "green4", linewidth = 1, alpha = 0.8) +
-  geom_function(fun = \(x) do.call(gompertz_mod$predict,
-                                   c(list(Age = x), get_coefs(all_fits2$female))),
-                color = "black", linewidth = 1, alpha = 0.8) +
-  scale_color_manual(values = c("black", "green4")) +
-  theme_bw() + 
-  labs(title = "Gompertz Model Fits") +
-  theme(legend.position = "bottom")
-
 ```
 
 
 
 ```{r}
+{
+  tictoc::tic()
+  logi_fits <- fit_data(rat_df, data_fct = "Sex", sigma_fct = "Sex",
+                       mod_fun = logistic_mod)
+  tictoc::toc()
+}
+{
+  tictoc::tic()
+  gomp_fits <- fit_data(rat_df, data_fct = "Sex", sigma_fct = "Sex",
+                       mod_fun = gompertz_mod)
+  tictoc::toc()
+}
+
+```
 
 
-all_fits <- fit_data(rat_df, data_fct = "Sex", sigma_fct = "Species",
-                     mod_fun = logistic_mod)
-
+```{r}
+# Logistic predictions
 ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) + 
-  geom_point(shape = 21) +
+  geom_pointrange(shape = 21, alpha = 0.4, size = 0.1,
+                  mapping = aes(ymin = pmax(0, Weight - sqrt(Variance)),
+                                ymax = Weight + sqrt(Variance))) +
+  geom_function(fun = \(x) do.call(logistic_mod$predict,
+                                   c(list(Age = x), get_coefs(logi_fits$male))),
+                color = "green4", linewidth = 1, alpha = 0.8) +
+  geom_function(fun = \(x) do.call(logistic_mod$predict,
+                                   c(list(Age = x), get_coefs(logi_fits$female))),
+                color = "black", linewidth = 1, alpha = 0.8) +
   scale_color_manual(values = c("black", "green4")) +
-  geom_line(aes(y = logistic_mod$predict(Age, A=0.235, k=0.04377, tmid=50.29)),
-            color = "black") +
-  geom_line(aes(y = logistic_mod$predict(Age, A=0.3809, k=0.0441, tmid=59.9)),
-            color = "green4") +
   theme_bw() + 
+  labs(title = "Logistic Model Fits") +
+  theme(legend.position = "bottom")
+
+# Gompertz predictions
+ggplot(rat_df, aes(x = Age, y = Weight, color = Sex)) + 
+  geom_pointrange(shape = 21, alpha = 0.4, size = 0.1,
+                  mapping = aes(ymin = pmax(0, Weight - sqrt(Variance)),
+                                ymax = Weight + sqrt(Variance))) +
+  geom_function(fun = \(x) do.call(gompertz_mod$predict,
+                                   c(list(Age = x), get_coefs(gomp_fits$male))),
+                color = "green4", linewidth = 1, alpha = 0.8) +
+  geom_function(fun = \(x) do.call(gompertz_mod$predict,
+                                   c(list(Age = x), get_coefs(gomp_fits$female))),
+                color = "black", linewidth = 1, alpha = 0.8) +
+  scale_color_manual(values = c("black", "green4")) +
+  theme_bw() + 
+  labs(title = "Gompertz Model Fits") +
   theme(legend.position = "bottom")
 ```
 
